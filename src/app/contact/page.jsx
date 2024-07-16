@@ -12,7 +12,7 @@ function ContactPage() {
     variant2: {
       x:200,
       y:200,
-      opacity:0.1
+      opacity:0
     }
     
   }
@@ -21,7 +21,6 @@ function ContactPage() {
     <div className='h-full flex items-center justify-center'>
       <motion.div className='w-96 h-96 bg-red-400 rounded' initial={{ x: -100 }}
         animate="variant2" variants={variants}  transition={{ duration: 3, delay: 1.5 }} ></motion.div>
-
     </div>
   )
 }
