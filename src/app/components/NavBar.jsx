@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from 'next/navigation'
 import NavLinks from "./NavLinks";
-import { motion } from "framer-motion";
+import { motion, stagger } from "framer-motion";
 import DarkButton from "./DarkButton";
 const links = [
   { url: "/", title: "Home" },
@@ -52,13 +52,38 @@ const bottomVariants = {
   }
 }
 
+const listVariants = {
+  opened: {
+    x: 0,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.2,
+    }
+  },
+  closed: {
+    x: "100vw",
+  }
+}
+
+const listItemsVariants = {
+  opened: {
+    opacity: 1,
+    x: 0,
+    
+  },
+  closed: {
+    opacity: 0,
+    x: -10,
+  }
+}
+
 const NavBar = () => {
   const [open, setOpen] = useState(false);
   const [change, setChange] = useState(false);
   const pathName = usePathname();
   return (
     <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
-      
+
       <div className="hidden md:flex gap-4 w-1/3 ">
         {links.map((link) => (
           <NavLinks link={link} key={link.title} />
@@ -83,13 +108,13 @@ const NavBar = () => {
             <Image width={24} height={24} alt="Foto" src={icon.iconName} />
           </Link>
         ))}
-       
+
       </div>
       <div className="md:hidden flex gap-3">
         {/* Menu Button */}
-        
+
         <DarkButton />
-        
+
         <button
           onClick={() => setOpen(!open)}
           className="w-10 h-8 flex flex-col justify-between z-50 relative"
@@ -100,13 +125,15 @@ const NavBar = () => {
         </button>
         {/* Menu List */}
         {open && (
-          <div className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-40">
+          <motion.div variants={listVariants} initial="closed" animate="opened" className="fixed top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-40">
             {links.map((link) => (
-              <Link onClick={() => setOpen(false)} href={link.url} key={link.title}>
-                {link.title}
-              </Link>
+              <motion.div variants={listItemsVariants} key={link.title}>
+                <Link onClick={() => setOpen(false)} href={link.url} >
+                  {link.title}
+                </Link>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         )}
       </div>
     </div>
