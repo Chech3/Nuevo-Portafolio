@@ -23,7 +23,6 @@ const TransitionProvider = ({ children }) => {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.7, ease: "easeOut" }}> {(pathName == "/") ? "home" : pathName.substring(1)} </motion.div>
 
-
                 <motion.div
                     className='h-screen w-screen fixed bg-black rounded-t-[100px] bottom-0 z-30 '
                     inital={{ height: "140vh" }}
@@ -31,7 +30,8 @@ const TransitionProvider = ({ children }) => {
                 <div className="h-24">
                     <NavBar />
                 </div>
-                <div className="sm:flex-grow md:h-[calc(130vh-6rem)] lg:h-[calc(100vh-6rem)] xl:h-[calc(100vh-6rem)] ">
+                {/* <div className="sm:flex-grow md:h-[calc(130vh-6rem)] lg:h-[calc(100vh-6rem)] xl:h-[calc(100vh-6rem)] "> */}
+                <div className="h-[calc(110vh-6rem)] ">
                     {children}
                 </div>
             </div>

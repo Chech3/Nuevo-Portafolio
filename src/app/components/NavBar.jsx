@@ -83,7 +83,6 @@ const NavBar = () => {
   const pathName = usePathname();
   return (
     <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
-
       <div className="hidden md:flex gap-4 w-1/3 ">
         {links.map((link) => (
           <NavLinks link={link} key={link.title} />
@@ -129,7 +128,9 @@ const NavBar = () => {
             {links.map((link) => (
               <motion.div variants={listItemsVariants} key={link.title}>
                 <Link onClick={() => setOpen(false)} href={link.url} >
+                <button className="px-2">
                   {link.title}
+                </button>
                 </Link>
               </motion.div>
             ))}
