@@ -14,10 +14,10 @@ const links = [
 ];
 const icons = [
   { iconName: "/github.png", url: "#" },
-  { iconName: "/dribbble.png", url: "#" },
+  // { iconName: "/dribbble.png", url: "#" },
   { iconName: "/facebook.png", url: "#" },
-  { iconName: "/instagram.png", url: "#" },
-  { iconName: "/pinterest.png", url: "#" },
+  // { iconName: "/instagram.png", url: "#" },
+  // { iconName: "/pinterest.png", url: "#" },
   { iconName: "/linkedin.png", url: "#" },
 ];
 
@@ -69,7 +69,7 @@ const listItemsVariants = {
   opened: {
     opacity: 1,
     x: 0,
-    
+
   },
   closed: {
     opacity: 0,
@@ -82,7 +82,7 @@ const NavBar = () => {
   const [change, setChange] = useState(false);
   const pathName = usePathname();
   return (
-    <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
+    <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl dark:bg-slate-700 bg-blue-300">
       <div className="hidden md:flex gap-4 w-1/3 ">
         {links.map((link) => (
           <NavLinks link={link} key={link.title} />
@@ -94,7 +94,7 @@ const NavBar = () => {
         <div className="text-sm bg-black rounded-md p-1 font-semibold flex items-center justify-center">
 
           <span className="text-white mr-1">Jose</span>
-          <span className={`w-12 h-8 rounded ${pathName === "/" ? "bg-green-500" : "bg-white"} text-black flex items-center justify-center`}>
+          <span className={`w-12 h-8 rounded ${pathName === "/" ? "bg-blue-400 dark:bg-blue-600" : "bg-white"} text-black flex items-center justify-center`}>
             .dev
           </span>
         </div>
@@ -107,12 +107,14 @@ const NavBar = () => {
             <Image width={24} height={24} alt="Foto" src={icon.iconName} />
           </Link>
         ))}
+        <DarkButton ancho={24} alto={24} />
+
 
       </div>
       <div className="md:hidden flex gap-3">
         {/* Menu Button */}
 
-        <DarkButton />
+        <DarkButton ancho={36} alto={36} />
 
         <button
           onClick={() => setOpen(!open)}
@@ -127,11 +129,11 @@ const NavBar = () => {
           <motion.div variants={listVariants} initial="closed" animate="opened" className="fixed top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-40">
             {links.map((link) => (
               <motion.div variants={listItemsVariants} key={link.title}>
-                <Link onClick={() => setOpen(false)} href={link.url} >
                 <button className="px-2">
-                  {link.title}
+                  <Link onClick={() => setOpen(false)} href={link.url} >
+                    {link.title}
+                  </Link>
                 </button>
-                </Link>
               </motion.div>
             ))}
           </motion.div>

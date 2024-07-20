@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 // import darkButton from "/modo-oscuro.png";
 import Image from "next/image";
 
-function DarkButton() {
+function DarkButton({ancho,alto}) {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ function DarkButton() {
   };
   return (
     <button onClick={toggleTheme}>
-      <Image alt="Cambio de modo" width={38} height={38} src="/modo-oscuro.png" />
+      <Image alt="Cambio de modo" width={ancho} height={alto} src="/modo-oscuro.png" />
     </button>
   );
 }

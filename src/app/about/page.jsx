@@ -6,25 +6,26 @@ function AboutPage() {
   return (
     <motion.div className="h-full" initial={{ y: "-200vh" }} animate={{ y: "0%" }} transition={{ duration: 1 }}>
       {/* container */}
-      <div className='bg-slate-600'>
+      <div className='dark:bg-slate-600 bg-blue-200'>
         {/* TEXT CONTAINER */}
         <div className='p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64'>
           {/* Biografia container*/}
           <div className='flex flex-col gap-12 justify-center'>
-            <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
-            <p className="text-lg">
+            <h1 className="font-bold tracking-wide text-2xl dark:text-white">BIOGRAPHY</h1>
+            <p className="text-lg dark:text-white tracking-wide">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
               harum quibusdam cupiditate nobis accusamus sed aut aperiam,
               reiciendis numquam! Voluptas voluptatibus obcaecati dolore itaque
               suscipit! Vel doloremque numquam quam nihil.
             </p>
             {/* BIOGRAPHY QUOTE */}
-            <span className="italic">
+            <span className="italic dark:text-white">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </span>
             {/* BIOGRAPHY SIGN SVG*/}
             <div className="self-end">
               <svg
+                className='dark:bg-white rounded-lg'
                 width="185"
                 height="77"
                 viewBox="0 0 370 114"
@@ -63,12 +64,68 @@ function AboutPage() {
             </motion.svg>
           </div>
           {/* SKILLS CONTAINER */}
-          <div>SKILSS</div>
+          <div className='flex flex-col gap-12 justify-center'>
+            <h2 className='font-bold text-2xl'>SKILSS</h2>
+            <div className='flex flex-col gap-4'>
+              <div className='flex gap-4 '>
+                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                  Python
+                </div>
+                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                  FastApi
+                </div>
+              </div>
+              <div className='flex gap-4'>
+                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                  PHP
+                </div>
+                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                  Laravel
+                </div>
+              </div>
+              <div className='flex gap-4'>
+                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                  HTML
+                </div>
+                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                  CSS
+                </div>
+                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                  Tailwind
+                </div>
+                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                  Bootstrap
+                </div>
+              </div>
+              <div className='flex gap-4'>
+                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                  JavaScript
+                </div>
+                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                  React
+                </div>
+                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                  Framer Motion
+                </div>
+                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                  Next
+                </div>
+                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                  Socket IO
+                </div>
+              </div>
+
+            </div>
+
+          </div>
           {/* EXPERIENCIA CONTAINER */}
-          <div>Experience</div>
+          <h2 className='font-bold text-2xl'>Experience</h2>
+          <div className='flex flex-wrap'>
+
+          </div>
           {/* SVG CONTAINER */}
-          <div className='hidden'></div>
         </div>
+        <div className='hidden'></div>
       </div>
     </motion.div>
   )

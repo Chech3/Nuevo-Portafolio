@@ -9,7 +9,7 @@ const TransitionProvider = ({ children }) => {
     const pathName = usePathname();
     return (
         <AnimatePresence mode='wait'>
-            <div key={pathName} className="min-h-full min-w-full dark:bg-slate-600 bg-blue-100 flex flex-col">
+            <div key={pathName} className="min-h-full min-w-full flex flex-col dark:bg-slate-600 bg-blue-200">
                 <motion.div
                     className='h-screen w-screen fixed bg-black rounded-b-[100px] z-40 '
                     animate={{ height: "0vh" }}
@@ -17,7 +17,7 @@ const TransitionProvider = ({ children }) => {
                     transition={{ duration: 0.5, ease: "easeOut" }} />
 
                 <motion.div
-                    className='fixed m-auto top-0 bottom-0 left-0 right-0 text-white text-8xl cursor-default z-50 w-fit h-fit'
+                    className='fixed m-auto top-0 bottom-0 left-0 right-0 text-white text-8xl cursor-default z-30 w-fit h-fit'
                     initial={{ opacity: 1 }}
                     animate={{ opacity: 0 }}
                     exit={{ opacity: 0 }}
@@ -30,8 +30,8 @@ const TransitionProvider = ({ children }) => {
                 <div className="h-24">
                     <NavBar />
                 </div>
-                {/* <div className="sm:flex-grow md:h-[calc(130vh-6rem)] lg:h-[calc(100vh-6rem)] xl:h-[calc(100vh-6rem)] "> */}
-                <div className="h-[calc(110vh-6rem)] ">
+                <div className="sm:flex-grow md:h-[calc(130vh-6rem)] lg:h-[calc(100vh-6rem)] xl:h-[calc(100vh-6rem)] ">
+                {/* <div className="h-[calc(130vh-6rem)]"> */}
                     {children}
                 </div>
             </div>
