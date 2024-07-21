@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { motion } from "framer-motion"
+import TecIcons from '../components/TecIcons'
 
 function AboutPage() {
   return (
@@ -24,20 +25,19 @@ function AboutPage() {
             </span>
             {/* BIOGRAPHY SIGN SVG*/}
             <div className="self-end">
-              <svg
-                className='dark:bg-white rounded-lg'
-                width="185"
-                height="77"
-                viewBox="0 0 370 114"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M66 2C66 29.4851 68.6687 64.5118 49.3333 87.4444C42.4997 95.5495 35.7683 97.6796 26.2222 101C20.002 103.164 8.87322 103.873 4 99C-0.260934 94.7391 2.94804 88.1756 8.22222 86.2222C13.7053 84.1915 17.942 84 23.7778 84C33.359 84 41.3193 83.5602 50.2222 87C56.6125 89.469 63.5773 91.9131 69.5555 95.5C75.4778 99.0533 87.1838 104.357 93.5 99.4444C96.1292 97.3995 96.2752 92.5118 96.9444 89.5C97.9646 84.9092 92.6432 83.2024 89 83C84.472 82.7484 82.3397 81.8856 82 88C81.8025 91.5554 83.5627 94.4193 86 97C88.9648 100.139 92.0717 100.96 96 98.7778C99.3106 96.9386 98 90.7299 98 87.5C98 85.0327 98.4365 83.1348 99.2222 80.7778C100.357 77.3743 99.2311 78.4486 101.5 77.9444C105.352 77.0886 108 76.4766 108 81.5C108 85.6646 109 89.3473 109 93.5C109 100.142 108.863 95.0454 110.5 91.4444C112.765 86.4616 116.631 81.205 121.5 78.5C127.057 75.4129 126 82.1509 126 85.5C126 92.5532 124.42 102 134 102C142.932 102 153 102.569 153 91.2222C153 87.1735 153.772 81.3206 148 81C141.934 80.663 142.107 81.8068 139.5 86.5C134.378 95.7204 137.972 105 149.5 105C153.589 105 153.996 99.8977 155.5 96.8889C157.902 92.0843 161 85.4067 161 80C161 74.0547 158.407 82.7413 157.222 84.2222C155.194 86.7574 155 92.5718 155 95.7778C155 99.9302 153.8 104.999 158 107.222C161.954 109.316 164.884 106.382 167.778 103.778C171.15 100.743 175.896 99.1107 180 97C186.143 93.8409 191.659 91.4099 198.222 89.2222C206.505 86.4614 214.839 87 223.5 87C230.613 87 231.628 104 222.5 104C216.954 104 199.251 107.814 207 95.2222C211.456 87.9805 214.484 80.6007 220 73.7778C229.781 61.6805 242.696 50.8197 256.222 43C264.769 38.0591 274.192 34.6264 283 30.2222C286.55 28.4473 280.07 32.3343 278.5 33.5556C271.707 38.8391 266.609 45.3914 260.556 51.4444C255.356 56.6444 250.682 61.459 246.5 67.5C242.917 72.6757 239.364 77.3825 236.556 83C233.829 88.4524 231.82 94.3142 228.556 99.4444C226.693 102.371 225.518 107.823 222.5 109.5C214.795 113.78 217.517 100.438 218.056 95.0556C218.678 88.8318 227.982 85.7572 233.056 88.6111C239.614 92.3003 245.506 97.7883 252 101.778C254.886 103.551 259.46 107 263 107C271.267 107 273.32 81.9392 268.778 77.2222C264.112 72.3774 261.206 80.5039 261 84C260.576 91.2135 257.836 96.9269 264.778 102C272.242 107.454 285.041 112.276 292.111 104.833C298.002 98.6323 304.301 90.8902 308.556 83.4444C310.355 80.295 310.132 84.6251 309.444 86C305.387 94.1158 303 102.264 303 111.5C303 116.021 337.534 99.1863 340.5 98C347.33 95.2679 355.47 93.8299 361.778 90C363.935 88.6902 365.473 88 368 88"
-                  stroke="black"
-                  strokeWidth="2"
-                />
+
+              <svg className='dark:bg-white rounded-lg' width="224" height="56" viewBox="0 0 224 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 2.65816C7.13677 2.65816 12.5148 3.07764 17.7826 2.98724C23.2925 2.89267 28.6992 2 34.2609 2C42.087 2 49.913 2 57.7391 2C63.1513 2 68.6127 2.65816 74 2.65816" stroke="black" strokeWidth="3" strokeLinecap="round" />
+                <path d="M42.5251 2C42.5251 9.84691 45.2115 17.9867 43.3332 25.6787C42.8953 27.4721 41.4894 28.9468 40.3848 30.3518C38.4497 32.8134 36.6452 35.3736 34.7502 37.8646C33.1184 40.0097 30.9476 41.0926 29.0282 42.8508C28.4166 43.411 28.0938 44.5595 27.1937 44.6619C25.6483 44.8377 24.5229 45.2299 22.8258 44.8184C20.7468 44.3143 18.8949 42.7995 16.9291 41.9341C15.4651 41.2896 13.9208 40.5928 12.6485 39.5863C7.48514 35.5015 4 29.9816 4 23.331" stroke="black" strokeWidth="3" strokeLinecap="round" />
+                <path d="M53.6825 19.5987C51.3212 23.1663 49.0318 26.9429 49.0006 31.3442C48.9498 38.5142 51.9632 45.2999 57.8875 49.5083C61.5387 52.1019 65.1806 51.0302 68.4651 48.4604C74.5143 43.7276 77.5477 36.3276 76.9185 28.6808C76.6025 24.8397 75.7125 20.3064 71.8031 18.8128C69.7506 18.0286 67.8787 16.7905 65.734 16.2366C64.1976 15.8398 62.4499 16.062 60.8787 16.062C58.8168 16.062 56.2146 15.6265 54.853 17.5465C54.0114 18.7333 53.4174 20.6517 52.512 21.5636" stroke="black" strokeWidth="3" strokeLinecap="round" />
+                <path d="M56 18.2356C56.545 21.5703 58.7071 23.1387 61.5519 23.9422C65.58 25.0798 69.4672 26.275 73.6612 26.5725C76.4766 26.7723 77.9086 25.5708 80.0437 23.8976C84.507 20.3999 86.2517 14.7639 90.2732 11.0355C92.3186 9.13917 93.7144 10.083 95.4098 11.9717C100.742 17.9112 105.746 24.1614 109.639 31.1869C112.727 36.7574 113.455 41.7974 110.995 47.7493C108.797 53.0648 102.564 53.217 97.7924 51.1599C95.455 50.1523 82.6339 43.5798 86.6885 39.3232C90.011 35.8352 94.9941 37.0222 98.623 39.4124C103.559 42.6632 107.285 47.6193 112.306 50.7364C116.246 53.1819 124.411 55.7257 128.393 52.4305C132.811 48.7754 134.519 42.2233 134.885 36.6928C135.007 34.8601 136.291 28.2479 133.29 27.8877C130.231 27.5208 127.644 29.882 127.607 32.9924C127.525 39.7449 132.502 46.5323 137.137 50.8478C139.144 52.7172 142.059 52.3413 144.656 52.3413C146.984 52.3413 151.609 53.5293 152 50.7364" stroke="black" strokeWidth="3" strokeLinecap="round" />
+                <path d="M139 19C139 17.2142 140.042 15.3698 140.455 13.6475C140.946 11.5976 141.541 9.52179 143 8" stroke="black" strokeWidth="3" strokeLinecap="round" />
+                <path d="M173.436 50C172.805 49.2842 173.045 48.2212 173.045 47.3284C173.045 43.0648 173.219 38.9336 173.913 34.7147C175.081 27.6192 175.99 20.1098 177.908 13.1664C178.554 10.8297 179.367 4.33341 182.034 3.18065C183.639 2.4867 186.391 3.97331 187.679 4.58216C190.75 6.03444 194.519 7.51096 197.015 9.92544C203.869 16.5564 204.969 28.02 207.741 36.7294C208.661 39.6222 209 43.3886 209 46.4524" stroke="black" strokeWidth="3" strokeLinecap="round" />
+                <path d="M176 29C182.138 29 187.63 27.9349 193.615 26.5278C197.166 25.6929 201.407 25 205 25" stroke="black" strokeWidth="3" strokeLinecap="round" />
+                <path d="M218 43C218.412 43.0868 218.165 43.8175 218.587 43.936C219.037 44.0623 219.546 43.9627 220 43.9627" stroke="black" strokeWidth="3" strokeLinecap="round" />
+                <path d="M219.584 42.4922C219.584 46.0423 222.24 43.3985 221.982 43.0937C221.356 42.3505 217.735 43.3529 218.015 44.3515C218.402 45.7275 221.47 44.4906 220.645 44.4609C216.058 44.2961 220.401 43.9999 221.244 42" stroke="black" strokeWidth="3" strokeLinecap="round" />
               </svg>
+
             </div>
             {/* BIOGRAPHY SCROLL SVG */}
             <motion.svg
@@ -66,56 +66,7 @@ function AboutPage() {
           {/* SKILLS CONTAINER */}
           <div className='flex flex-col gap-12 justify-center'>
             <h2 className='font-bold text-2xl'>SKILSS</h2>
-            <div className='flex flex-col gap-4'>
-              <div className='flex gap-4 '>
-                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                  Python
-                </div>
-                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                  FastApi
-                </div>
-              </div>
-              <div className='flex gap-4'>
-                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                  PHP
-                </div>
-                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                  Laravel
-                </div>
-              </div>
-              <div className='flex gap-4'>
-                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                  HTML
-                </div>
-                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                  CSS
-                </div>
-                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                  Tailwind
-                </div>
-                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                  Bootstrap
-                </div>
-              </div>
-              <div className='flex gap-4'>
-                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                  JavaScript
-                </div>
-                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                  React
-                </div>
-                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                  Framer Motion
-                </div>
-                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                  Next
-                </div>
-                <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                  Socket IO
-                </div>
-              </div>
-
-            </div>
+            <TecIcons />
 
           </div>
           {/* EXPERIENCIA CONTAINER */}

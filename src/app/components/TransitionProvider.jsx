@@ -22,7 +22,6 @@ const TransitionProvider = ({ children }) => {
                     animate={{ opacity: 0 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.7, ease: "easeOut" }}> {(pathName == "/") ? "home" : pathName.substring(1)} </motion.div>
-
                 <motion.div
                     className='h-screen w-screen fixed bg-black rounded-t-[100px] bottom-0 z-30 '
                     inital={{ height: "140vh" }}
