@@ -9,7 +9,7 @@ const TransitionProvider = ({ children }) => {
     const pathName = usePathname();
     return (
         <AnimatePresence mode='wait'>
-            <div key={pathName} className="min-h-full min-w-full flex flex-col dark:bg-slate-600 bg-blue-200">
+            <div key={pathName} className="min-h-full min-w-full  dark:bg-slate-600 bg-blue-200 flex flex-col">
                 <motion.div
                     className='h-screen w-screen fixed bg-black rounded-b-[100px] z-40 '
                     animate={{ height: "0vh" }}
@@ -17,7 +17,7 @@ const TransitionProvider = ({ children }) => {
                     transition={{ duration: 0.5, ease: "easeOut" }} />
 
                 <motion.div
-                    className='fixed m-auto top-0 bottom-0 left-0 right-0 text-white text-8xl cursor-default z-30 w-fit h-fit'
+                    className='fixed m-auto top-0 bottom-0 left-0 right-0 text-white text-8xl cursor-default z-40 w-fit h-fit'
                     initial={{ opacity: 1 }}
                     animate={{ opacity: 0 }}
                     exit={{ opacity: 0 }}

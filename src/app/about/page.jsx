@@ -65,13 +65,13 @@ function AboutPage() {
           </div>
           {/* SKILLS CONTAINER */}
           <div className='flex flex-col gap-12 justify-center'>
-            <h2 className='font-bold text-2xl'>SKILSS</h2>
+            <h2 className='font-bold text-2xl dark:text-white'>SKILSS</h2>
             <TecIcons />
 
           </div>
           {/* EXPERIENCIA CONTAINER */}
-          <h2 className='font-bold text-2xl'>Experience</h2>
-          <div className='flex flex-wrap'>
+          <div className='flex flex-col gap-12 justify-center'>
+            <h2 className='font-bold dark:text-white text-2xl'>EXPERIENCE</h2>
 
           </div>
           {/* SVG CONTAINER */}
