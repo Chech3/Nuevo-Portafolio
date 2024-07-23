@@ -2,6 +2,7 @@
 import React from 'react'
 import { motion } from "framer-motion"
 import dynamic from 'next/dynamic'
+import ExperienceListItemLeft from '../components/ExperienceListItemLeft';
 const TecIcons = dynamic(() => import('../components/TecIcons'), {
   ssr: false,
 });
@@ -10,7 +11,7 @@ function AboutPage() {
   return (
     <motion.div className="h-full" initial={{ y: "-200vh" }} animate={{ y: "0%" }} transition={{ duration: 1 }}>
       {/* container */}
-      <div className='dark:bg-slate-600 bg-blue-200'>
+      <div className='dark:bg-slate-600 bg-blue-200 h-full overflow-scroll lg:flex'>
         {/* TEXT CONTAINER */}
         <div className='p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64'>
           {/* Biografia container*/}
@@ -63,16 +64,16 @@ function AboutPage() {
                 strokeWidth="1"
               ></path>
             </svg>
+
           </div>
           {/* SKILLS CONTAINER */}
           <div className='flex flex-col gap-12 justify-center'>
             <h2 className='font-bold text-2xl dark:text-white'>SKILSS</h2>
             <TecIcons />
 
-          </div>
-
-          <svg
-              className='motion-safe:animate-bounce'
+            {/* BIOGRAPHY SCROLL SVG */}
+            <svg
+              className='motion-safe:animate-bounce mt-32'
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -92,14 +93,25 @@ function AboutPage() {
               ></path>
             </svg>
 
-          {/* EXPERIENCIA CONTAINER */}
-          <div className='flex flex-col gap-12 justify-center'>
-            <h2 className='font-bold dark:text-white text-2xl'>EXPERIENCE</h2>
+          </div>
 
+
+          {/* EXPERIENCIA CONTAINER */}
+          <div className='flex flex-col gap-12 justify-center pb-48'>
+            {/* Experience title */}
+            <h2 className='font-bold dark:text-white text-2xl'>EXPERIENCE</h2>
+            {/* Experience list */}
+            <div className=''>
+              {/* Experience list Items */}
+              <div className='flex flex-col'>
+                {/* <ExperienceListItem /> */}
+                <ExperienceListItemLeft />
+              </div>
+            </div>
           </div>
           {/* SVG CONTAINER */}
         </div>
-        <div className='hidden'></div>
+        <div className='hidden lg:block w-1/3 xl:w-1/2'></div>
       </div>
     </motion.div>
   )
