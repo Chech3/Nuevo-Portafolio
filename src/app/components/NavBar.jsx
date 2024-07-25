@@ -13,7 +13,7 @@ const links = [
   { url: "/contact", title: "Contact" },
 ];
 const icons = [
-  { iconName: "/github.png", url: "#" },
+  { iconName: "/github.png", url: "https://github.com/Chech3" },
   // { iconName: "/dribbble.png", url: "#" },
   { iconName: "/facebook.png", url: "#" },
   // { iconName: "/instagram.png", url: "#" },
@@ -103,7 +103,7 @@ const NavBar = () => {
       {/* iconos */}
       <div className="hidden md:flex gap-4 w-1/3">
         {icons.map((icon) => (
-          <Link href={icon.url} key={icon.iconName}>
+          <Link target="_blank" href={icon.url} key={icon.iconName}>
             <Image width={24} height={24} alt="Foto" src={icon.iconName} />
           </Link>
         ))}

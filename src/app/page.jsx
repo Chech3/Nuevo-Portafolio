@@ -16,8 +16,8 @@ function Home() {
           </h1>
           <p className="tracking-wide dark:text-gray-300">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo ipsa, id, nemo necessitatibus velit ipsum ratione, quasi praesentium esse a quos quas debitis aspernatur totam facilis eveniet! Modi explicabo id officiis necessitatibus autem animi praesentium, optio molestias repellat vero dolore.</p>
           <div className="w-full flex gap-4 sm:mb-5 md:mb-4">
-            <button className="p-4 rounded-lg ring-1 ring-black dark:bg-black dark:text-white dark:hover:bg-slate-700 hover:scale-105 hover:bg-blue-300 delay-100 duration-300">View my work</button>
-            <button className="p-4 rounded-lg ring-1 ring-black dark:bg-black dark:text-white dark:hover:bg-slate-700 hover:scale-105 hover:bg-blue-300 delay-100 duration-300">Contact me</button>
+            <button className="p-4 rounded-lg ring-1 dark:ring-white hover:dark:ring-black ring-black  dark:text-white dark:hover:bg-slate-700 hover:scale-105 hover:bg-blue-300 delay-100 duration-300">View my work</button>
+            <button className="p-4 rounded-lg ring-1 dark:ring-white hover:dark:ring-black ring-black  dark:text-white dark:hover:bg-slate-700 hover:scale-105 hover:bg-blue-300 delay-100 duration-300">Contact me</button>
           </div>
         </div>
       </div>

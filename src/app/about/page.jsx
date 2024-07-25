@@ -3,6 +3,7 @@ import React from 'react'
 import { motion } from "framer-motion"
 import dynamic from 'next/dynamic'
 import ExperienceListItemLeft from '../components/ExperienceListItemLeft';
+import Image from 'next/image';
 const TecIcons = dynamic(() => import('../components/TecIcons'), {
   ssr: false,
 });
@@ -13,15 +14,12 @@ function AboutPage() {
       {/* container */}
       <div className='dark:bg-slate-600 bg-blue-200 h-full overflow-scroll lg:flex'>
         {/* TEXT CONTAINER */}
-        <div className='p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64'>
+        <div className='p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:pr-0 lg:w-2/3 xl:1/2'>
           {/* Biografia container*/}
           <div className='flex flex-col gap-12 justify-center'>
             <h1 className="font-bold tracking-wide text-2xl dark:text-white">BIOGRAPHY</h1>
             <p className="text-lg dark:text-white tracking-wide">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              harum quibusdam cupiditate nobis accusamus sed aut aperiam,
-              reiciendis numquam! Voluptas voluptatibus obcaecati dolore itaque
-              suscipit! Vel doloremque numquam quam nihil.
+              Me gusta mucho la programacion. No hay nada que me guste mas que aprender nuevas tecnologias y probarlas. Sin embargo uno de mis hobbies es jugar Super Smash por eso es ese robot
             </p>
             {/* BIOGRAPHY QUOTE */}
             <span className="italic dark:text-white">
@@ -109,9 +107,11 @@ function AboutPage() {
               </div>
             </div>
           </div>
-          {/* SVG CONTAINER */}
         </div>
-        <div className='hidden lg:block w-1/3 xl:w-1/2'></div>
+          {/* GIF CONTAINER */}
+        <div className='mt-48 sticky top-40 z-30 hidden lg:block w-1/3 xl:w-1/2'>
+          <Image className='rounded-lg' src={"/rob-nintendo.gif"} width={400} height={400}></Image>
+        </div>
       </div>
     </motion.div>
   )
