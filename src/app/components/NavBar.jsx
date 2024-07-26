@@ -79,19 +79,19 @@ const listItemsVariants = {
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
-  const [change, setChange] = useState(false);
   const pathName = usePathname();
   return (
     <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl dark:bg-slate-700 bg-blue-300">
-      <div className="hidden md:flex gap-4 w-1/3 ">
+      {/* <Image className="mr-10 dark:invert " src="/smash.png" width={40} height={28}/> */}
+      <div className="hidden md:flex gap-5 w-1/3 ">
         {links.map((link) => (
           <NavLinks link={link} key={link.title} />
         ))}
       </div>
       {/*Logo */}
-      <div onClick={() => setChange(!change)} className="md:hidden lg:flex xl:w-1/3 xl:justify-center">
+      <div className="md:hidden pointer-events-none lg:flex xl:w-1/3 xl:justify-center">
 
-        <div className="text-sm bg-black rounded-md p-1 font-semibold flex items-center justify-center">
+        <div className="ml-0 text-sm bg-black rounded-md p-1 font-semibold flex items-center justify-center md:ml-20 ">
 
           <span className="text-white mr-1">Jose</span>
           <span className={`w-12 h-8 rounded ${pathName === "/" ? "bg-blue-400 dark:bg-blue-600" : "bg-white"} text-black flex items-center justify-center`}>
@@ -101,7 +101,7 @@ const NavBar = () => {
 
       </div>
       {/* iconos */}
-      <div className="hidden md:flex gap-4 w-1/3">
+      <div className="hidden md:flex lg:flex xl:flex gap-4 w-1/3">
         {icons.map((icon) => (
           <Link target="_blank" href={icon.url} key={icon.iconName}>
             <Image width={24} height={24} alt="Foto" src={icon.iconName} />

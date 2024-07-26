@@ -8,7 +8,7 @@ function Home() {
         {/* image container */}
 
         <Image alt="Foto" sizes="(max-width: 768px) 100vw, 
-        (max-width: 1200px) 50vw, 33vw" priority src="/fotonga.heic" height={500} width={520} className="object-contain mr-3 " />
+        (max-width: 1200px) 50vw, 33vw" priority src="/fotonga.heic" height={500} width={520} className="object-contain mr-3" />
 
         <div className="flex flex-col gap-8 items-center justify-center lg:h-full lg:w-1/2 lg: my-5">
           <h1 className=" tracking-wide text-4xl font-bold dark:text-white ">

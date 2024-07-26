@@ -23,7 +23,9 @@ function DarkButton({ancho,alto}) {
   };
   return (
     <button onClick={toggleTheme}>
-      <Image alt="Cambio de modo" width={ancho} height={alto} src="/modo-oscuro.png" />
+      {/* <Image alt="Cambio de modo" width={ancho} height={alto} src="/modo-oscuro.png" /> */}
+      <Image className="dark:hidden" alt="sol" width={ancho} height={alto} src="/lunaluna.png" ></Image>
+      <Image className="hidden dark:block" alt="luna" width={ancho} height={alto} src="/solsol.png"></Image>
     </button>
   );
 }
