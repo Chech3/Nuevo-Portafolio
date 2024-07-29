@@ -25,7 +25,7 @@ function AboutPage() {
       {/* container */}
       <div className='dark:bg-slate-600 bg-blue-200 h-full overflow-scroll lg:flex'>
         {/* TEXT CONTAINER */}
-        <div className='p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:pr-0 lg:w-2/3 xl:1/2'>
+        <div className='p-4 sm:p-8 md:p-12 lg:p-20 xl:p-32 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:pr-0 lg:w-2/3 xl:1/2'>
           {/* Biografia container*/}
           <motion.div
           initial={{ x: "-300px" }} animate={isBioRefInView ? { x: 0 } : {}}
@@ -56,7 +56,10 @@ function AboutPage() {
 
             </div>
             {/* BIOGRAPHY SCROLL SVG */}
-            <svg
+            <motion.svg
+            initial= {{opacity: 0.2, y:0}}
+            animate= {{opacity: 1, y:"10px"}}
+            transition={{repeat: Infinity, duration: 3, ease:"easeInOut"}}
               className='motion-safe:animate-bounce dark:invert'
               viewBox="0 0 24 24"
               fill="none"
@@ -75,7 +78,7 @@ function AboutPage() {
                 stroke="#000000"
                 strokeWidth="1"
               ></path>
-            </svg>
+            </motion.svg>
 
           </motion.div>
           {/* SKILLS CONTAINER */}
@@ -86,7 +89,10 @@ function AboutPage() {
             <TecIcons />
 
             {/* BIOGRAPHY SCROLL SVG */}
-            <svg
+            <motion.svg
+              initial= {{opacity: 0.2, y:0}}
+              animate= {{opacity: 1, y:"10px"}}
+              transition={{repeat: Infinity, duration: 3, ease:"easeInOut"}}
               className='motion-safe:animate-bounce mt-32 dark:invert'
               viewBox="0 0 24 24"
               fill="none"
@@ -105,7 +111,7 @@ function AboutPage() {
                 stroke="#000000"
                 strokeWidth="1"
               ></path>
-            </svg>
+            </motion.svg>
 
           </motion.div>
 
@@ -113,12 +119,13 @@ function AboutPage() {
           {/* EXPERIENCIA CONTAINER */}
           <div className='flex flex-col gap-12 justify-center pb-48'>
             {/* Experience title */}
-            <motion.h2 initial={{ x: "-300px" }} animate={isExperienceH2Ref ? { x: 0 } : {}} ref={experienceH2Ref} className='font-bold dark:text-white text-2xl'>EXPERIENCE</motion.h2>
+            <motion.h2 initial={{ x: "-300px" }} transition={{ delay: 0.2 }} animate={isExperienceH2Ref ? { x: 0 } : {}} ref={experienceH2Ref} className='font-bold dark:text-white text-2xl'>EXPERIENCE</motion.h2>
             {/* Experience list */}
             <div className=''>
               {/* Experience list Items */}
               <motion.div
                 ref={experienceRef}
+                transition={{ delay: 0.2 }}
                 initial={{ x: "-300px" }} animate={isExperienceRefInView ? { x: 0 } : {}}
                 className='flex flex-col'>
                 {/* <ExperienceListItem /> */}
@@ -128,8 +135,8 @@ function AboutPage() {
           </div>
         </div>
         {/* GIF CONTAINER */}
-        <div className='mt-48 sticky top-40 z-30 hidden lg:block w-1/3 xl:w-1/2'>
-          <Image alt='Rob' className='rounded-lg' src={"/rob-nintendo.gif"} width={400} height={400}></Image>
+        <div className='mt-32 sticky top-32 z-30 hidden lg:block w-1/3 xl:w-1/2'>
+          <Image alt='Rob' className='rounded-lg lg:ml-5 lg:w-4/5 xl:w-4/5' src={"/rob-nintendo.gif"} width={400} height={400}></Image>
         </div>
       </div>
     </motion.div>
