@@ -57,9 +57,6 @@ function AboutPage() {
             </div>
             {/* BIOGRAPHY SCROLL SVG */}
             <motion.svg
-            initial= {{opacity: 0.2, y:0}}
-            animate= {{opacity: 1, y:"10px"}}
-            transition={{repeat: Infinity, duration: 3, ease:"easeInOut"}}
               className='motion-safe:animate-bounce dark:invert'
               viewBox="0 0 24 24"
               fill="none"
@@ -90,9 +87,6 @@ function AboutPage() {
 
             {/* BIOGRAPHY SCROLL SVG */}
             <motion.svg
-              initial= {{opacity: 0.2, y:0}}
-              animate= {{opacity: 1, y:"10px"}}
-              transition={{repeat: Infinity, duration: 3, ease:"easeInOut"}}
               className='motion-safe:animate-bounce mt-32 dark:invert'
               viewBox="0 0 24 24"
               fill="none"
