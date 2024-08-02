@@ -1,5 +1,5 @@
 import React from 'react'
-import ExperienceListItemRight from './ExperienceListItemRight'
+// import ExperienceListItemRight from './ExperienceListItemRight'
 
 const ExperienceListItem = () => {
     return (
@@ -7,30 +7,46 @@ const ExperienceListItem = () => {
             {/*left*/}
             <div className='w-1/3'>
                 {/* Job Title */}
-                <div className='bg-white dark:bg-slate-800 text-black dark:text-white  font-semibold p-3 rounded-b-lg rounded-s-lg '>Lorem ipsum dolor sit amet.</div>
+                <h3 className='bg-white dark:bg-slate-800 text-black dark:text-white  font-semibold p-3 rounded-b-lg rounded-s-lg duration-300 '>Programmer </h3>
                 {/* job desc */}
-                <div className='italic p-3 text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime perspiciatis dolores sunt eos velit debitis.</div>
+                <p className='italic p-3 text-sm duration-300'>
+                    In my work as a programmer at VIT, I work in different branches of programming. From web development to python scripting
+                </p>
 
                 {/* job date */}
-                <div className='p-3 text-dark dark:text-white text-sm font-semibold'>2023 august - present</div>
+                <h4 className='p-3 text-dark dark:text-white text-sm font-semibold duration-300'>2023 august - present</h4>
 
                 {/* job company */}
-                <div className='p-3 bg-white dark:bg-slate-800 text-black dark:text-white text-sm font-semibold w-fit rounded-b-lg rounded-s-lg '>Job Company</div>
+                <h5 className='p-3 bg-white dark:bg-slate-800 text-black dark:text-white text-sm font-semibold w-fit rounded-b-lg rounded-s-lg duration-300'>Venezolana de Industria Tecnológica</h5>
             </div>
             {/* center */}
             <div className='w-1/6 flex justify-center'>
                 {/* Line */}
-                <div className="w-1 h-full dark:bg-gray-200 bg-gray-600 rounded relative">
+                <div className="w-1 h-80 dark:bg-gray-200 bg-gray-600 rounded relative duration-300">
                     {/* line circle */}
-                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2 "></div>
                 </div>
             </div>
-            
             {/* right */}
-
-            <ExperienceListItemRight />
-
-
+            <div className="w-1/3 "> 
+                {/* JOB TITLE */}
+                <h3 className="bg-white dark:bg-slate-800 text-black dark:text-white p-3 font-semibold rounded-b-lg rounded-s-lg duration-300">
+                    Developer
+                </h3>
+                {/* JOB DESC */}
+                <p className="p-3 text-sm italic text-dark dark:text-white duration-300">
+                I hope to be able to fill this text with your company's information 🫢
+                </p>
+                {/* JOB DATE */}
+                <h4 className="p-3 text-dark dark:text-white text-sm font-semibold duration-300">
+                    2024 - XXXX
+                </h4>
+                {/* JOB COMPANY */}
+                <h5 className="p-3 rounded bg-white dark:bg-slate-800 text-black dark:text-white text-sm font-semibold w-fit duration-300">
+                    Next Company
+                </h5>
+            </div>
+            
 
         </div>
 
