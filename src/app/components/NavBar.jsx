@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from 'next/navigation'
 import NavLinks from "./NavLinks";
 import { motion, stagger } from "framer-motion";
@@ -75,9 +75,17 @@ const listItemsVariants = {
   }
 }
 
+
+
+
 const NavBar = () => {
   const [open, setOpen] = useState(false);
   const pathName = usePathname();
+
+  useEffect(() => {
+    pathName == "/portfolio" ?  document.body.style.overflow = '' : document.body.style.overflow = 'auto';
+  }, [])
+  
   return (
     <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl dark:bg-slate-700 bg-blue-300">
       {/* <Image className="mr-10 dark:invert " src="/smash.png" width={40} height={28}/> */}

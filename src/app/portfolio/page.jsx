@@ -52,7 +52,7 @@ function PortFolioPage() {
       </div>
 
 
-      <div className="w-screen h-screen flex flex-col gap-16 items-center justify-center text-center">
+      <div className=" w-screen h-screen bg-white flex flex-col gap-16 items-center justify-center text-center">
         <h3 className="text-8xl mt-10">Do you have a project?</h3>
         <div className="relative">
           <motion.svg
@@ -62,14 +62,14 @@ function PortFolioPage() {
             className="w-64 h-64 md:w-[500px] md:h-[500px] "
           >
             <defs>
-              <path   
+              <path
                 id="circlePath"
                 d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
               />
             </defs>
             <text fill="#000">
               <textPath xlinkHref="#circlePath" className="text-xl">
-                Front-end and Back-end Developer 
+                Front-end and Back-end Developer
               </textPath>
             </text>
           </motion.svg>

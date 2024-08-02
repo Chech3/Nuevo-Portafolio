@@ -27,7 +27,7 @@ export const items = [
     id: 4,
     color: "from-purple-300 to-red-300 dark:from-purple-500 dark:via-indigo-500 dark:to-purple-500",
     title: "Sunflower",
-    desc: "Sunflower made with html and css",
+    desc: "This sunflower. It's something simple, but it has great meaning for me. Was made with HTML and CSS",
     img: "/flower.png",
     link: "https://chech3.github.io/Flor-Amarilla/",
   },

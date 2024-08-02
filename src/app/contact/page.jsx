@@ -55,7 +55,7 @@ function ContactPage() {
       <div className='h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48'>
         {/* text container */}
         <div className='h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl'>
-          <div className='my-10'>
+          <div className='my-10 '>
             {text.split("").map((letter, index) =>
             (<motion.span
               className='dark:text-white'
@@ -66,7 +66,7 @@ function ContactPage() {
               {letter}
             </motion.span>)
             )}
-            <span className='text-center'>😁</span>
+            <span className='flex justify-center items-center'>😁</span>
           </div>
         </div>
         {/* form container */}
@@ -78,7 +78,6 @@ function ContactPage() {
           <span className='dark:text-white font-semibold '>Regards</span>
           <button className='font-semilbold p-4 rounded-lg ring-1 bg-blue-300 dark:bg-slate-600 dark:ring-black hover:dark:ring-black ring-black  dark:text-white dark:hover:bg-slate-700 hover:scale-105 hover:bg-blue-400 delay-100 duration-300'>Send</button>
         </form>
-        
       </div>
     </motion.div>
   )

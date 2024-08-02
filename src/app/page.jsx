@@ -9,7 +9,9 @@ function Home() {
         {/* image container */}
 
         <Image alt="Foto" sizes="(max-width: 768px) 100vw, 
-        (max-width: 1200px) 50vw, 33vw" priority src="/yoo.jpeg" height={500} width={520} className="lg:object-contain mr-3 sm:object-contain sm:flex sm:items-center sm:justify-center " />
+        (max-width: 1200px) 50vw, 33vw" priority src="/yoo.jpeg" 
+        height={500} width={520}
+        className=" lg:fit lg:object-fill lg:w-9/12 lg:h-9/12 md:w-[520px] md:h-[500px] sm:h-auto sm:w-auto  mr-3 sm:object-contain " />
 
         <div className="flex flex-col gap-8 delay-100 items-center justify-center lg:h-full lg:w-1/2">
           <h1 className="tracking-wide text-4xl md:text-6xl font-bold dark:text-white lg:text-start sm:text-center md:text-center text-center ">
@@ -20,7 +22,7 @@ function Home() {
           </p>
           <div className="w-full flex gap-4 sm:mb-5 md:mb-4 justify-center items-center lg:justify-start lg:items-start">
             <Link href="/portfolio">
-              <button className="p-4 rounded-lg ring-1 dark:ring-white hover:dark:ring-black ring-black  dark:text-white dark:hover:bg-slate-700 hover:scale-105 hover:bg-blue-300 delay-100 duration-300">View my work</button>
+              <button className="p-4 rounded-lg ring-1 dark:ring-white hover:dark:ring-black active:dark:ring-black ring-black  dark:text-white dark:hover:bg-slate-700 dark:active:bg-slate-700 hover:scale-105 hover:bg-blue-300 active:bg-blue-300 delay-100 duration-300">View my work</button>
             </Link>
             <Link href="/contact">
               <button className="p-4 rounded-lg ring-1 dark:ring-white hover:dark:ring-black ring-black  dark:text-white dark:hover:bg-slate-700 hover:scale-105 hover:bg-blue-300 delay-100 duration-300">Contact me</button>
