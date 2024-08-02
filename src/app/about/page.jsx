@@ -21,7 +21,7 @@ function AboutPage() {
 
 
   return (
-    <motion.div className="h-full" initial={{ y: "-200vh" }} animate={{ y: "0%" }} transition={{ duration: 1 }}>
+    <motion.div className="h-full" initial={{ y: "-200vh" }} animate={{ y: "5%" }} transition={{ duration: 1 }}>
       {/* container */}
       <div className='dark:bg-slate-600 bg-blue-200 h-full overflow-scroll lg:flex'>
         {/* TEXT CONTAINER */}

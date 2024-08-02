@@ -14,11 +14,9 @@ const links = [
 ];
 const icons = [
   { iconName: "/github.png", url: "https://github.com/Chech3" },
-  // { iconName: "/dribbble.png", url: "#" },
-  { iconName: "/facebook.png", url: "#" },
-  // { iconName: "/instagram.png", url: "#" },
-  // { iconName: "/pinterest.png", url: "#" },
-  { iconName: "/linkedin.png", url: "#" },
+  
+  { iconName: "/facebook.png", url: "https://www.facebook.com/joseangel.garces.14/" },
+  { iconName: "/linkedin.png", url: "https://www.linkedin.com/in/jose-garces-07617227b/" },
 ];
 
 const topVariants = {
