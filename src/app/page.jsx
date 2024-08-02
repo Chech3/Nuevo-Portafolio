@@ -9,7 +9,7 @@ function Home() {
         {/* image container */}
 
         <Image alt="Foto" sizes="(max-width: 768px) 100vw, 
-        (max-width: 1200px) 50vw, 33vw" priority src="/fotonga.heic" height={500} width={520} className="lg:object-contain mr-3 sm:object-contain sm:flex sm:items-center sm:justify-center " />
+        (max-width: 1200px) 50vw, 33vw" priority src="/yoo.jpeg" height={500} width={520} className="lg:object-contain mr-3 sm:object-contain sm:flex sm:items-center sm:justify-center " />
 
         <div className="flex flex-col gap-8 delay-100 items-center justify-center lg:h-full lg:w-1/2">
           <h1 className="tracking-wide text-4xl md:text-6xl font-bold dark:text-white lg:text-start sm:text-center md:text-center text-center ">

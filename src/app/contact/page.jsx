@@ -66,7 +66,7 @@ function ContactPage() {
               {letter}
             </motion.span>)
             )}
-            😁
+            <span className='text-center'>😁</span>
           </div>
         </div>
         {/* form container */}

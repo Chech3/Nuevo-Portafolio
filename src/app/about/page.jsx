@@ -21,11 +21,11 @@ function AboutPage() {
 
 
   return (
-    <motion.div className="h-full" initial={{ y: "-200vh" }} animate={{ y: "5%" }} transition={{ duration: 1 }}>
+    <motion.div className="h-full" initial={{ y: "-200vh" }} animate={{ y: "0%" }} transition={{ duration: 1 }}>
       {/* container */}
       <div className='dark:bg-slate-600 bg-blue-200 h-full overflow-scroll lg:flex'>
         {/* TEXT CONTAINER */}
-        <div className='p-4 sm:p-8 md:p-12 lg:p-20 xl:p-32 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:pr-0 lg:w-2/3 xl:1/2'>
+        <div className='p-4 sm:p-8 md:p-12 lg:p-20 xl:p-32 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:pr-0 lg:w-2/3 xl:1/2 mx-auto'>
           {/* Biografia container*/}
           <motion.div
             initial={{ x: "-300px" }} animate={isBioRefInView ? { x: 0 } : {}}
@@ -123,9 +123,9 @@ function AboutPage() {
           </div>
         </div>
         {/* GIF CONTAINER */}
-        <div className='mt-32 sticky top-32 z-30 hidden lg:block w-1/3 xl:w-1/2'>
-          <Image alt='Rob' className='rounded-lg lg:ml-5 lg:w-4/5 xl:w-4/5' src={"/rob-nintendo.gif"} width={400} height={400}></Image>
-        </div>
+        {/* <div className='mt-32 sticky top-32 z-30 hidden lg:block w-1/3 xl:w-1/2'> */}
+          {/* <Image alt='Rob' className='rounded-lg lg:ml-5 lg:w-4/5 xl:w-4/5' src={"/rob-nintendo.gif"} width={400} height={400}></Image> */}
+        {/* </div> */}
       </div>
     </motion.div>
   )
