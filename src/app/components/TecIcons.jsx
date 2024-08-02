@@ -9,11 +9,11 @@ const TecIcons = () => {
     }
 
     const handleClose = () => {
-    document.body.style.overflow = '';
-  };
+        document.body.style.overflow = '';
+    };
     return (
         <div className='flex flex-col gap-3 overflow-clip'>
-            <div className='flex gap-3 '>
+            <div className='flex flex-wrap gap-3 '>
                 <Popup onClose={handleClose} onOpen={handleOpen} trigger={
                     <div className="rounded-lg bg-slate-200 dark:bg-slate-400 p-2 text-sm cursor-pointer text-white hover:bg-white dark:hover:bg-slate-300">
                         {/* HTML */}
@@ -97,10 +97,10 @@ const TecIcons = () => {
                     </p>
                 </Popup>
 
-            </div>
+            {/* </div> */}
 
 
-            <div className='flex gap-3'>
+            {/* <div className='flex gap-3'> */}
                 <Popup onClose={handleClose} onOpen={handleOpen} trigger={
                     <div className="rounded-lg bg-slate-200 dark:bg-slate-400 p-2 text-sm cursor-pointer  text-white hover:bg-white dark:hover:bg-slate-300">
                         {/* Framer Motion */}
@@ -144,7 +144,7 @@ const TecIcons = () => {
                     </p>
                 </Popup>
 
-                
+
 
                 <Popup onClose={handleClose} onOpen={handleOpen} trigger={
                     <div className="rounded-lg bg-slate-200 dark:bg-slate-400 p-2 text-sm cursor-pointer  text-white hover:bg-white dark:hover:bg-slate-300">
@@ -192,13 +192,13 @@ const TecIcons = () => {
 
 
 
+{/* 
+            </div> */}
 
-            </div>
-
-            <div className='flex gap-3'>
+            {/* <div className='flex gap-3'> */}
 
 
-            <Popup onClose={handleClose} onOpen={handleOpen} trigger=
+                <Popup onClose={handleClose} onOpen={handleOpen} trigger=
                     {
                         <div className=" rounded-lg bg-slate-200 dark:bg-slate-400 p-2 text-sm cursor-pointer  text-white hover:bg-white dark:hover:bg-slate-300">
                             {/* Python */}
@@ -253,8 +253,8 @@ const TecIcons = () => {
                 </Popup>
 
 
-                
-               
+
+
 
             </div>
 
