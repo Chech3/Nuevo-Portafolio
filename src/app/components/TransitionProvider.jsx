@@ -29,7 +29,7 @@ const TransitionProvider = ({ children }) => {
                 <div className="h-24">
                     <NavBar />
                 </div>
-                <div className="sm:flex-grow md:h-[calc(130vh-6rem)] lg:h-[calc(100vh-6rem)] xl:h-[calc(100vh-6rem)] ">
+                <div className=" md:h-[calc(130vh-6rem)] lg:h-[calc(100vh-6rem)] xl:h-[calc(100vh-6rem)] ">
                 {/* <div className="h-[calc(130vh-6rem)]"> */}
                     {children}
                 </div>

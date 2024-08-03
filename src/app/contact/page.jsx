@@ -58,7 +58,7 @@ function ContactPage() {
           <div className='my-10 '>
             {text.split("").map((letter, index) =>
             (<motion.span
-              className='dark:text-white'
+              className='dark:text-white duration-300'
               key={index}
               initial={{ opacity: 1 }}
               animate={{ opacity: 0 }}
@@ -71,11 +71,11 @@ function ContactPage() {
         </div>
         {/* form container */}
         <form onSubmit={sendEmail} ref={form} className='h-1/2 lg:h-full lg:w-1/2 dark:bg-slate-500 bg-blue-100 rounded-xl text-xl flex flex-col gap-8 justify-center p-24 lg:p-20'>
-          <span className='dark:text-white font-semibold'>Dear Jose</span>
+          <span className='dark:text-white font-semibold duration-300'>Dear Jose</span>
           <textarea name='user_message' className='bg-transparent dark:text-white resize-none border-b-2 border-b-black outline-none' rows={6} />
-          <span className='dark:text-white font-semibold'>My mail address is: </span>
+          <span className='dark:text-white font-semibold duration-300'>My mail address is: </span>
           <input type="email" name='user_email' className='bg-transparent dark:text-white border-b-2 border-b-black outline-none' />
-          <span className='dark:text-white font-semibold '>Regards</span>
+          <span className='dark:text-white font-semibold duration-300 '>Regards</span>
           <button className='font-semilbold p-4 rounded-lg ring-1 bg-blue-300 dark:bg-slate-600 dark:ring-black hover:dark:ring-black ring-black  dark:text-white dark:hover:bg-slate-700 hover:scale-105 hover:bg-blue-400 delay-100 duration-300'>Send</button>
         </form>
       </div>

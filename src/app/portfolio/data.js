@@ -26,10 +26,10 @@ export const items = [
   {
     id: 4,
     color: "from-purple-300 to-red-300 dark:from-purple-500 dark:via-indigo-500 dark:to-purple-500",
-    title: "Sunflower",
-    desc: "This sunflower. It's something simple, but it has great meaning for me. Was made with HTML and CSS",
-    img: "/flower.png",
-    link: "https://chech3.github.io/Flor-Amarilla/",
+    title: "BlackJack",
+    desc: "Blackjack game made with HTML, CSS and JavaScript. It is played against the computer and the first to be 21 wins",
+    img: "/black-jack.png",
+    link: "https://chech3.github.io/BlackJack/",
   },
 ];
 

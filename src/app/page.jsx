@@ -7,7 +7,6 @@ function Home() {
     <motion.div className="h-full" initial={{ y: "-200vh" }} animate={{ y: "0%" }} transition={{ duration: 1 }}>
       <div className="mb-6 h-full flex flex-col lg:flex-row sm:px-8 md:px-12 md:justify-center md:items-center lg:px-20 xl:px-20">
         {/* image container */}
-
         <Image alt="Foto" sizes="(max-width: 768px) 100vw, 
         (max-width: 1200px) 50vw, 33vw" priority src="/yoo.jpeg" 
         height={500} width={520}
