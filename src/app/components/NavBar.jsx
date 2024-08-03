@@ -83,6 +83,9 @@ const NavBar = () => {
   const pathName = usePathname();
 
   useEffect(() => {
+    if (pathName == "/about") {
+      document.body.style.overflow = 'hidden';
+    }
     pathName == "/portfolio" ?  document.body.style.overflow = '' : document.body.style.overflow = 'auto';
   }, [])
   
