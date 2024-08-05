@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+import './styles/style.css'
 const TecIcons = () => {
 
     const handleOpen = () => {
@@ -12,7 +13,7 @@ const TecIcons = () => {
         document.body.style.overflow = '';
     };
     return (
-        <div className='flex flex-col gap-3 overflow-clip'>
+        <div className='flex flex-col gap-3 overflow-scroll  '>
             <div className='flex flex-wrap gap-3 '>
                 <Popup onClose={handleClose} onOpen={handleOpen} trigger={
                     <div className="rounded-lg bg-slate-200 dark:bg-slate-400 p-2 text-sm cursor-pointer text-white hover:bg-white dark:hover:bg-slate-300">
