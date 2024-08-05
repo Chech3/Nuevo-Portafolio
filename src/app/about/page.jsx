@@ -127,7 +127,7 @@ function AboutPage() {
 
 
           {/* EXPERIENCIA CONTAINER */}
-          <div className='flex flex-col gap-12 justify-center pb-48'>
+          <div className='flex flex-col gap-12 justify-center pb-60'>
             {/* Experience title */}
             <motion.h2 initial={{ x: "-300px" }} 
             transition={{ delay: 0.2 }}
