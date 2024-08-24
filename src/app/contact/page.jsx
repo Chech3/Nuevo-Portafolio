@@ -4,54 +4,70 @@ import { motion } from "framer-motion"
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import * as Yup from 'yup';
 
+const validationSchema = Yup.object().shape({
+  user_message: Yup.string().required('Message is required'),
+  email: Yup.string().email('Please enter a valid email address').required('Mail is required'),
+});
 
 function ContactPage() {
-
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(false);
   const text = "Hello friend"
-
   const form = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
-    setSuccess(false);
-    setError(false);
 
-    emailjs
-      .sendForm(process.env.NEXT_PUBLIC_SERVICE_ID,
+    const formData = {
+      user_message: form.current.user_message.value,
+      email: form.current.user_email.value,
+    };
+
+    try {
+      // Validar los datos del formulario
+      await validationSchema.validate(formData, { abortEarly: false });
+
+      // Si la validación es exitosa, enviar el correo
+      await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_SERVICE_ID,
         process.env.NEXT_PUBLIC_TEMPLATE_ID,
-        form.current, {
-        publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
-      })
-      .then(
-        () => {
-          form.current.reset();
-          // console.log('SUCCESS!');
-          setSuccess(true);
-          toast.success("Message sent successfully!");
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          });
-        },
-        () => {
-          // console.log('FAILED...', error.text);
-          setError(true);
-          toast.error("Something went wrong")
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          });
-        },
+        form.current,
+        process.env.NEXT_PUBLIC_PUBLIC_KEY
       );
-  };
 
+      form.current.reset();
+      toast.success("Message sent successfully!");
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    } catch (error) {
+      // Manejar errores de validación
+      if (error.name === 'ValidationError') {
+        const formErrors = {};
+        console.log({ error })
+        error.inner.map((err) => {
+          console.log(err.path)
+          formErrors[err.path] = err.message;
+          toast.error(err.message);
+        });
+
+
+      } else {
+        // Manejar errores de envío de correo
+        toast.error("Something went wrong");
+      }
+
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   return (
     <motion.div className="h-full" initial={{ y: "-200vh" }} animate={{ y: "0%" }} transition={{ duration: 1 }}>
-      <ToastContainer />      
+      <ToastContainer />
       <div className='h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48'>
         {/* text container */}
         <div className='h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl'>
@@ -83,4 +99,4 @@ function ContactPage() {
   )
 }
 
-export default ContactPage
+export default ContactPage;
