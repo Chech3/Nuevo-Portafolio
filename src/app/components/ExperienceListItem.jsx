@@ -3,11 +3,11 @@ import React from 'react'
 
 const ExperienceListItem = () => {
     return (
-        <div className='dark:text-white flex justify-between h-48'>
+        <div className='dark:text-white flex justify-between sm:h-full md:48 lg:h-48'>
             {/*left*/}
             <div className='w-1/3'>
                 {/* Job Title */}
-                <h3 className='bg-white dark:bg-slate-800 text-black dark:text-white  font-semibold p-3 rounded-b-lg rounded-s-lg duration-300 '>Programmer </h3>
+                <h3 className='bg-white dark:bg-slate-800 text-black dark:text-white  font-semibold p-3 rounded-b-lg rounded-s-lg duration-300 w-32 sm:w-full md:w-full lg:w-full  '>Programmer </h3>
                 {/* job desc */}
                 <p className='italic p-3 text-sm duration-300'>
                     In my work as a programmer at VIT, I work in different branches of programming. From web development to python scripting
@@ -30,7 +30,7 @@ const ExperienceListItem = () => {
             {/* right */}
             <div className="w-1/3 "> 
                 {/* JOB TITLE */}
-                <h3 className="bg-white dark:bg-slate-800 text-black dark:text-white p-3 font-semibold rounded-b-lg rounded-s-lg duration-300">
+                <h3 className="bg-white dark:bg-slate-800 text-black dark:text-white p-3 font-semibold rounded-b-lg rounded-s-lg duration-300 ">
                     Developer
                 </h3>
                 {/* JOB DESC */}

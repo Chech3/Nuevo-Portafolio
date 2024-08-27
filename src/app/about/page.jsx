@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react'
 import { motion, useInView } from "framer-motion"
 import dynamic from 'next/dynamic'
-import ExperienceListItemLeft from '../components/ExperienceListItemLeft';
+import ExperienceListItemLeft from '../components/ExperienceListItem';
 import Image from 'next/image';
 const TecIcons = dynamic(() => import('../components/TecIcons'), {
   ssr: false,
