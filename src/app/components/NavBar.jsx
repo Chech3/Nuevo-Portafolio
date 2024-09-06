@@ -13,10 +13,9 @@ const links = [
   { url: "/contact", title: "Contact" },
 ];
 const icons = [
-  { iconName: "/github.png", url: "https://github.com/Chech3" },
-  
-  { iconName: "/facebook.png", url: "https://www.facebook.com/joseangel.garces.14/" },
-  { iconName: "/linkedin.png", url: "https://www.linkedin.com/in/jose-garces-07617227b/" },
+  {iconName: "/descargar.png", url: "/cvJoseGarces.pdf", alt: "Descargar"},
+  { iconName: "/github.png", url: "https://github.com/Chech3", alt: "Github" },
+  { iconName: "/linkedin.png", url: "https://www.linkedin.com/in/jose-garces-07617227b/", alt: "Linkedin" },
 ];
 
 const topVariants = {
@@ -105,18 +104,16 @@ const NavBar = () => {
       <div className="hidden md:flex lg:flex xl:flex gap-4 w-1/3">
         {icons.map((icon) => (
           <Link target="_blank" href={icon.url} key={icon.iconName}>
-            <Image width={24} height={24} alt="Foto" src={icon.iconName} />
+            <Image width={24} height={24} alt={icon.alt} src={icon.iconName} />
           </Link>
         ))}
         <DarkButton ancho={24} alto={24} />
-
-
       </div>
       <div className="md:hidden flex gap-3">
         {/* Menu Button */}
         {icons.map((icon) => (
           <Link target="_blank" href={icon.url} key={icon.iconName}>
-            <Image width={36} height={36} alt="Foto" src={icon.iconName} />
+            <Image width={36} height={36} alt={icon.alt} src={icon.iconName} />
           </Link>
         ))}
 
