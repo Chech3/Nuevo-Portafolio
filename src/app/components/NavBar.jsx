@@ -13,7 +13,7 @@ const links = [
   { url: "/contact", title: "Contact" },
 ];
 const icons = [
-  {iconName: "/descargar.png", url: "/cvJoseGarces.pdf", alt: "Descargar"},
+  { iconName: "/descargar.png", url: "/cvJoseGarces.pdf", alt: "Descargar" },
   { iconName: "/github.png", url: "https://github.com/Chech3", alt: "Github" },
   { iconName: "/linkedin.png", url: "https://www.linkedin.com/in/jose-garces-07617227b/", alt: "Linkedin" },
 ];
