@@ -20,36 +20,39 @@ function AboutPage() {
   const isSkillRefInView = useInView(skillRef, { threshold: 0.1 });
   const isExperienceRefInView = useInView(experienceRef, { threshold: 0.1 });
 
+
+  
+
   const scrollToMiddle = () => {
-      window.scrollTo({
-        top: window.innerHeight / 2,
-        behavior: 'smooth',
-      });  
+    window.scrollTo({
+      top: window.innerHeight / 2,
+      behavior: 'smooth',
+    });
   };
 
   const scrollToEnd = () => {
     window.scrollTo({
       top: document.body.scrollHeight,
       behavior: 'smooth',
-    });  
-};
+    });
+  };
 
   return (
     <motion.div
-    initial={{ y: "-200vh" }} 
-    animate={{ y: "0%" }} 
-    transition={{ duration: 1 }}
-    className="h-full">
+      initial={{ y: "-200vh" }}
+      animate={{ y: "0%" }}
+      transition={{ duration: 1 }}
+      className="h-full">
       {/* container */}
       <div className='dark:bg-slate-600 bg-blue-200 h-full overflow-y-scroll lg:flex'>
         {/* TEXT CONTAINER */}
         <div className='p-4 sm:p-8 md:p-12 lg:p-20 xl:p-32 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:pr-0 lg:w-2/3 xl:1/2 mx-auto'>
           {/* Biografia container*/}
           <motion.div
-            initial={{ x: "-300px" }} 
+            initial={{ x: "-300px" }}
             animate={isBioRefInView ? { x: 0 } : {}}
             transition={{ delay: 0.2 }}
-            ref={bioRef} 
+            ref={bioRef}
             className='flex flex-col gap-12 justify-center'>
             <h1 className="font-bold tracking-wide text-2xl dark:text-white duration-300">BIOGRAPHY</h1>
             <p className="text-lg dark:text-white tracking-wide duration-300">
@@ -64,7 +67,7 @@ function AboutPage() {
               </svg>
             </div>
 
-            
+
             {/* BIOGRAPHY SCROLL SVG */}
             <motion.svg
               onClick={scrollToMiddle}
@@ -90,12 +93,12 @@ function AboutPage() {
 
           </motion.div>
           {/* SKILLS CONTAINER */}
-          <motion.div 
-          initial={{ x: "-300px" }} 
-          animate={isSkillRefInView ? { x: 0 } : {}}
-          transition={{ delay: 0.2 }} 
-          ref={skillRef}
-          className='flex flex-col gap-12 justify-center'>
+          <motion.div
+            initial={{ x: "-300px" }}
+            animate={isSkillRefInView ? { x: 0 } : {}}
+            transition={{ delay: 0.2 }}
+            ref={skillRef}
+            className='flex flex-col gap-12 justify-center'>
             <h2
               className='font-bold text-2xl dark:text-white duration-300'>SKILSS</h2>
             <TecIcons />
@@ -129,10 +132,10 @@ function AboutPage() {
           {/* EXPERIENCIA CONTAINER */}
           <div className='flex flex-col gap-12 justify-center pb-60'>
             {/* Experience title */}
-            <motion.h2 initial={{ x: "-300px" }} 
-            transition={{ delay: 0.2 }}
-            animate={isExperienceH2Ref ? { x: 0 } : {}} 
-            ref={experienceH2Ref}
+            <motion.h2 initial={{ x: "-300px" }}
+              transition={{ delay: 0.2 }}
+              animate={isExperienceH2Ref ? { x: 0 } : {}}
+              ref={experienceH2Ref}
             >
               <span className='duration-300 font-bold dark:text-white text-2xl'>
                 EXPERIENCE
@@ -152,10 +155,11 @@ function AboutPage() {
             </div>
           </div>
         </div>
+        
         {/* GIF CONTAINER */}
         <div className='mt-32 sticky top-32 z-30 hidden lg:block w-1/3 xl:w-1/2'>
-          <Image alt='Rob' className='rounded-lg lg:ml-5 lg:w-9/12 xl:w-4/5' src={"/rob-nintendo.gif"} 
-          width={400} height={400}></Image>
+          <Image alt='Rob' className='rounded-lg lg:ml-5 lg:w-9/12 xl:w-4/5' src={"/rob-nintendo.gif"}
+            width={400} height={400}></Image>
         </div>
       </div>
     </motion.div>

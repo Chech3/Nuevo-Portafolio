@@ -12,7 +12,7 @@ const validationSchema = Yup.object().shape({
 });
 
 function ContactPage() {
-  const text = "Hello friend"
+  const text = "Hello Friend"
   const form = useRef();
 
   const sendEmail = async (e) => {

@@ -7,6 +7,12 @@ import { usePathname } from 'next/navigation'
 const TransitionProvider = ({ children }) => {
 
     const pathName = usePathname();
+
+    const firstLetter = pathName[1]
+
+    const capitalWord = firstLetter?.toUpperCase() + pathName.slice(2, pathName.length)
+
+
     return (
         <AnimatePresence mode='wait'>
             <div key={pathName} className="min-h-full min-w-full  dark:bg-slate-600 bg-blue-200 flex flex-col">
@@ -21,7 +27,7 @@ const TransitionProvider = ({ children }) => {
                     initial={{ opacity: 1 }}
                     animate={{ opacity: 0 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 0.7, ease: "easeOut" }}> {(pathName == "/") ? "home" : pathName.substring(1)} </motion.div>
+                    transition={{ duration: 0.7, ease: "easeOut" }}> {(pathName == "/") ? "Home" : capitalWord} </motion.div>
                 <motion.div
                     className='h-screen w-screen fixed bg-black rounded-t-[100px] bottom-0 z-30 '
                     inital={{ height: "140vh" }}
@@ -30,7 +36,7 @@ const TransitionProvider = ({ children }) => {
                     <NavBar />
                 </div>
                 <div className="sm:h-[calc(130vh-6rem)] md:h-[calc(130vh-6rem)] lg:h-[calc(100vh-6rem)] xl:h-[calc(100vh-6rem)] ">
-                {/* <div className="h-[calc(130vh-6rem)]"> */}
+                    {/* <div className="h-[calc(130vh-6rem)]"> */}
                     {children}
                 </div>
             </div>
