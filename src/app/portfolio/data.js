@@ -34,7 +34,7 @@ export const items = [
     title: "BlackJack",
     desc: "Blackjack game made with HTML, CSS and JavaScript. It is played against the computer and the first to be 21 wins",
     img: BlackJack,
-    link: "https://chech3.github.io/BlackJack/",
+    link: "https://blackjack-two-gules.vercel.app/",
   },
 ];
 
