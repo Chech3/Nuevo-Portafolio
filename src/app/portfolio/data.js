@@ -1,5 +1,5 @@
 import chat from "@public/chat.png"
-import sistema from "@public/sistema.png"
+import canvas from "@public/canvas.png"
 import scriptPython from "@public/scriptPython.png"
 import BlackJack from "@public/black-jack.png"
 
@@ -15,10 +15,10 @@ export const items = [
   {
     id: 2,
     color: "from-blue-300 to-violet-300 dark:from-purple-500 dark:via-indigo-500 dark:to-purple-500",
-    title: "Parking System",
-    desc: "Parking system made to manage available spaces (This is an unfinished project, but the front was made by me). Made with React and Tailwind",
-    img: sistema,
-    link: "http://estacionamiento-frontend.vercel.app/",
+    title: "Canvas to paint",
+    desc: "Canvas made in react together with some Material UI components and the FabricJs library.",
+    img: canvas,
+    link: "https://paint-clon.vercel.app/",
   },
   {
     id: 3,
