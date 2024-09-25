@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from 'next/navigation'
 import NavLinks from "./NavLinks";
-import { motion, stagger } from "framer-motion";
+import { motion } from "framer-motion";
 import DarkButton from "./DarkButton";
 const links = [
   { url: "/", title: "Home" },
