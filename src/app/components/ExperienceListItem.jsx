@@ -1,13 +1,10 @@
 import React from 'react'
 // import ExperienceListItemRight from './ExperienceListItemRight'
 
-const ExperienceListItem = () => {
+const ExperienceListItem = ({bioRef}) => {
     const scrollToStart = () => {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth',
-        });
-      };
+        bioRef.current.scrollIntoView({ behavior: 'smooth' })
+    };
     return (
         <div className='dark:text-white flex justify-between sm:h-full md:48 lg:h-48'>
             {/*left*/}
@@ -20,7 +17,7 @@ const ExperienceListItem = () => {
                 </p>
 
                 {/* job date */}
-                <h4 className='p-3 text-dark dark:text-white text-sm font-semibold duration-300'>2023 august - present</h4>
+                <h4 className='p-3 text-dark dark:text-white text-sm font-semibold duration-300'>2023 march - present</h4>
 
                 {/* job company */}
                 <h5 className='p-3 bg-white dark:bg-slate-800 text-black dark:text-white text-sm font-semibold w-fit rounded-b-lg rounded-s-lg duration-300'>Venezolana de Industria Tecnológica</h5>
@@ -52,7 +49,7 @@ const ExperienceListItem = () => {
                     Next Company
                 </h5>
 
-                <div className='sm:hidden mt-20 rotate-180'>
+                <div className=' mt-20 rotate-180'>
                     {/* BIOGRAPHY SCROLL SVG */}
                     <svg
                         onClick={scrollToStart}

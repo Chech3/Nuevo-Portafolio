@@ -24,17 +24,11 @@ function AboutPage() {
   
 
   const scrollToMiddle = () => {
-    window.scrollTo({
-      top: window.innerHeight / 2,
-      behavior: 'smooth',
-    });
+    skillRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
   const scrollToEnd = () => {
-    window.scrollTo({
-      top: document.body.scrollHeight,
-      behavior: 'smooth',
-    });
+    experienceH2Ref.current.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -150,7 +144,7 @@ function AboutPage() {
                 initial={{ x: "-300px" }} animate={isExperienceRefInView ? { x: 0 } : {}}
                 className='flex flex-col'>
                 {/* <ExperienceListItem /> */}
-                <ExperienceListItemLeft />
+                <ExperienceListItemLeft bioRef={bioRef} />
               </motion.div>
             </div>
           </div>
