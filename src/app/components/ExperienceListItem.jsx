@@ -4,6 +4,14 @@ import React from 'react'
 const ExperienceListItem = ({bioRef}) => {
     const scrollToStart = () => {
         bioRef.current.scrollIntoView({ behavior: 'smooth' })
+        
+
+        setTimeout(() => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+              });
+        }, 1000);
     };
     return (
         <div className='dark:text-white flex justify-between sm:h-full md:48 lg:h-48'>

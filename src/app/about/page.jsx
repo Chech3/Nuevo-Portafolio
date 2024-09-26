@@ -25,10 +25,25 @@ function AboutPage() {
 
   const scrollToMiddle = () => {
     skillRef.current.scrollIntoView({ behavior: 'smooth' });
+
+    setTimeout(() => {
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+  }, 1000);
+
   };
 
   const scrollToEnd = () => {
     experienceH2Ref.current.scrollIntoView({ behavior: 'smooth' });
+
+    setTimeout(() => {
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+  }, 1000);
   };
 
   return (
