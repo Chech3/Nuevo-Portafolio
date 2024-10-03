@@ -11,7 +11,7 @@ function Home() {
         (max-width: 1200px) 50vw, 33vw" priority src="/yoo.jpeg"
           height={500} width={500}
           className=" lg:mt-5 lg:ml-5 lg:mr-5 lg:w-9/12 lg:h-9/12 
-        md:w-[800px] md:h-[500px] md:mt-20 sm:h-1/2 mr-3 " />
+        md:w-[800px] md:h-[500px] md:mt-20 sm:h-1/2 mr-3 rounded-xl shadow-2xl " />
 
         <div className="flex flex-col gap-4 delay-100 items-center justify-center md:h-1/2 lg:h-full lg:w-1/2">
           <h1 className="mt-4 tracking-wide text-4xl md:text-6xl  dark:text-white lg:text-start sm:text-center md:text-center text-center font-medium ">
