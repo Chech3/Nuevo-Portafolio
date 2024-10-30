@@ -104,10 +104,10 @@ const NavBar = () => {
       <div className="hidden md:flex lg:flex xl:flex gap-4 w-1/3">
         {icons.map((icon) => (
           <Link target="_blank" href={icon.url} key={icon.iconName}>
-            <Image width={24} height={24} alt={icon.alt} src={icon.iconName} />
+            <Image width={32} height={32} alt={icon.alt} src={icon.iconName} />
           </Link>
         ))}
-        <DarkButton ancho={24} alto={24} />
+        <DarkButton ancho={32} alto={32} />
       </div>
       <div className="md:hidden flex gap-3">
         {/* Menu Button */}

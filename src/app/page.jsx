@@ -5,7 +5,7 @@ import Link from "next/link";
 function Home() {
   return (
     <motion.div className="h-full p-5 sm:p-0 md:p-0 lg:p-0 xl:p-0" initial={{ y: "-200vh" }} animate={{ y: "0%" }} transition={{ duration: 1 }}>
-      <div className="mb-6 h-full flex flex-col lg:flex-row items-center justify-center  sm:px-8 sm:justify-center sm:items-center md:px-12 md:justify-center md:items-center lg:px-20 xl:px-20">
+      <div className="mb-6 h-full flex flex-col lg:flex-row items-center justify-center sm:px-8 sm:justify-center sm:items-center md:px-12 md:justify-center md:items-center lg:px-20 xl:px-20">
         {/* image container */}
         <Image alt="Foto" sizes="(max-width: 768px) 100vw, 
         (max-width: 1200px) 50vw, 33vw" priority src="/yoo.jpeg"
@@ -17,7 +17,7 @@ function Home() {
           <h1 className="mt-4 tracking-wide text-4xl md:text-6xl  dark:text-white lg:text-start sm:text-center md:text-center text-center font-medium ">
             Web Application Developer
           </h1>
-          <p className="leading-relaxed delay-100 duration-300 dark:text-white text-center lg:text-start">
+          <p className="leading-loose delay-100 duration-300 dark:text-white text-center lg:text-start">
             Hi! I'm Jose Angel, a full-stack developer with a wide range of skills. From dynamic user interfaces with React to efficient APIs with FastAPI, my experience in JavaScript, PHP and Python allows me to offer complete solutions.
           </p>
           <div className="w-full flex gap-4 justify-center items-center lg:justify-start lg:items-start">
