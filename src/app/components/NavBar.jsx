@@ -89,9 +89,9 @@ const NavBar = () => {
         ))}
       </div>
       {/*Logo */}
-      <div className="hidden pointer-events-none lg:flex xl:w-1/3 xl:justify-center">
+      <div className="pointer-events-none lg:flex xl:w-1/3 xl:justify-center">
 
-        <div className="ml-0 text-sm bg-black rounded-md p-1 font-semibold flex items-center justify-center md:ml-20 ">
+        <div className="ml-0 text-sm bg-black rounded-md p-0.5 md:p-1 font-semibold flex items-center justify-center md:ml-20 ">
 
           <span className="text-white mr-1">Jose</span>
           <span className={`w-12 h-8 rounded ${pathName === "/" ? "bg-blue-400 dark:bg-blue-600" : "bg-white"} text-black flex items-center justify-center`}>
@@ -107,17 +107,17 @@ const NavBar = () => {
             <Image width={32} height={32} alt={icon.alt} src={icon.iconName} />
           </Link>
         ))}
-        <DarkButton ancho={32} alto={32} />
+        <DarkButton ancho={30} alto={30} />
       </div>
-      <div className="md:hidden flex gap-8">
+      <div className="md:hidden flex gap-4">
         {/* Menu Button */}
         {icons.map((icon) => (
           <Link target="_blank" href={icon.url} key={icon.iconName}>
-            <Image width={36} height={36} alt={icon.alt} src={icon.iconName} />
+            <Image width={30} height={30} alt={icon.alt} src={icon.iconName} />
           </Link>
         ))}
 
-        <DarkButton ancho={36} alto={36} />
+        <DarkButton ancho={30} alto={30} />
 
         <button
           onClick={() => setOpen(!open)}
