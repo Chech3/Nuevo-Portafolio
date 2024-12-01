@@ -89,7 +89,7 @@ const NavBar = () => {
         ))}
       </div>
       {/*Logo */}
-      <div className="md:hidden pointer-events-none lg:flex xl:w-1/3 xl:justify-center">
+      <div className="hidden pointer-events-none lg:flex xl:w-1/3 xl:justify-center">
 
         <div className="ml-0 text-sm bg-black rounded-md p-1 font-semibold flex items-center justify-center md:ml-20 ">
 
@@ -109,7 +109,7 @@ const NavBar = () => {
         ))}
         <DarkButton ancho={32} alto={32} />
       </div>
-      <div className="md:hidden flex gap-3">
+      <div className="md:hidden flex gap-8">
         {/* Menu Button */}
         {icons.map((icon) => (
           <Link target="_blank" href={icon.url} key={icon.iconName}>

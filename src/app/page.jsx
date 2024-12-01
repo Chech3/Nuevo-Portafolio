@@ -18,7 +18,7 @@ function Home() {
             Web Application Developer
           </h1>
           <p className="leading-loose delay-100 duration-300 dark:text-white text-center lg:text-start">
-            Hi! I'm Jose Angel, a full-stack developer with a wide range of skills. From dynamic user interfaces with React to efficient APIs with FastAPI, my experience in JavaScript, PHP and Python allows me to offer complete solutions.
+            Hi! I'm Jose Angel, a full-stack developer with a wide range of skills. From dynamic user interfaces with React to efficient APIs with Laravel, my experience in JavaScript and PHP allows me to offer complete solutions.
           </p>
           <div className="w-full flex gap-4 justify-center items-center lg:justify-start lg:items-start">
             <Link href="/portfolio">

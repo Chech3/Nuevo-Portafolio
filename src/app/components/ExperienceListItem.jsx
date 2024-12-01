@@ -42,19 +42,19 @@ const ExperienceListItem = ({bioRef}) => {
             <div className="w-1/3 ">
                 {/* JOB TITLE */}
                 <h3 className="bg-white dark:bg-slate-800 text-black dark:text-white p-3 font-semibold rounded-b-lg rounded-s-lg duration-300 ">
-                    Developer
+                    Fronted Developer
                 </h3>
                 {/* JOB DESC */}
                 <p className="p-3 text-sm italic text-dark dark:text-white duration-300">
-                    I hope to be able to fill this text with your company's information 🫢
+                I was in a work simulation, where we worked as a whole team. We developed an application to be able to have online medical consultations.
                 </p>
                 {/* JOB DATE */}
                 <h4 className="p-3 text-dark dark:text-white text-sm font-semibold duration-300">
-                    2024 - XXXX
+                    2024  november - december
                 </h4>
                 {/* JOB COMPANY */}
                 <h5 className="p-3 rounded bg-white dark:bg-slate-800 text-black dark:text-white text-sm font-semibold w-fit duration-300">
-                    Next Company
+                    No Country
                 </h5>
 
                 <div className=' mt-20 rotate-180'>
