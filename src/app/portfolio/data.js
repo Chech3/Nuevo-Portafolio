@@ -41,7 +41,7 @@ export const items = [
     id: 5,
     color: "from-red-300 to-purple-300 dark:from-purple-500 dark:via-indigo-500 dark:to-purple-500",
     title: "Firefox Clon",
-    desc: "Firefox clon made with Tailwind ",
+    desc: "Firefox clone built using Tailwind CSS, designed to replicate the sleek and modern user interface of the popular web browser.",
     img: firefox,
     link: "https://clon-firefox.vercel.app/",
   },

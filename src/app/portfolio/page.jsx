@@ -11,8 +11,6 @@ function PortFolioPage() {
   const { scrollYProgress } = useScroll({ target: ref });
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
 
-  // class="w-screen animated-background h-screen bg-gradient-to-r from-blue-500 via-blue-500 to-indigo-500" 
-
   return (
     <motion.div className="h-full"
       initial={{ y: "-200vh" }}
@@ -26,31 +24,38 @@ function PortFolioPage() {
         <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
           <motion.div style={{ x }} className="flex">
             <div className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r dark:from-blue-500 dark:via-blue-500 dark:to-indigo-500 from-blue-300 to-red-300`} />
-            {items.map((item) => (
+            {items.map((item, index) => (
               <div
-                className={`h-screen w-screen flex items-center justify-center animated-background bg-gradient-to-r ${item.color} `}
                 key={item.id}
+                className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
               >
-                <div className="flex flex-col text-white">
-                  <h3 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-6xl text-black dark:text-white lg:text-center">
+                <div className="flex flex-col items-center text-center max-w-4xl mx-auto px-4">
+                  <h3 className="text-2xl font-bold mb-6 md:text-4xl lg:text-5xl text-black dark:text-white">
                     {item.title}
                   </h3>
-                  <div className="my-1 relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[400px]">
-                    <Image src={item.img} alt="" fill />
+                  <div className="relative w-full aspect-video max-w-2xl mb-6">
+                    <Image
+                      src={item.img}
+                      alt={item.title}
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
                   </div>
-                  <p className="w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px] dark:text-white text-black">
+                  <p className="text-sm md:text-base lg:text-lg mb-8 text-black dark:text-white">
                     {item.desc}
                   </p>
-                  <Link target="_blank" href={item.link} className="flex justify-end my-2">
-                    <button className="p-2 text-sm md:p-4 md:text-md lg:p-4 lg:text-lg bg-slate-700 text-white font-semibold mb-4 rounded transition ease-in-out hover:-translate-y-1 hover:bg-slate-800 hover:scale-110 delay-150 duration-300">See Demo</button>
+                  <Link href={item.link} target="_blank">
+                    <button className="px-6 py-3 text-sm md:text-base lg:text-lg bg-slate-700 text-white font-semibold rounded transition ease-in-out hover:-translate-y-1 hover:bg-slate-800 hover:scale-105 duration-300">
+                      Ver Demo
+                    </button>
                   </Link>
                 </div>
               </div>
             ))}
             <div
-                className={`h-screen w-screen flex items-center justify-center animated-background bg-gradient-to-r from-red-300 to-blue-300 dark:from-purple-500 dark:via-indigo-500 dark:to-blue-500`}
-          
-              ></div>
+              className={`h-screen w-screen flex items-center justify-center animated-background bg-gradient-to-r from-red-300 to-blue-300 dark:from-purple-500 dark:via-indigo-500 dark:to-blue-500`}
+            />
           </motion.div>
         </div>
       </div>
