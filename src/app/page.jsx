@@ -8,7 +8,7 @@ function Home() {
       className="min-h-screen w-full p-5 overflow-y-auto"
       initial={{ y: "-200vh" }} animate={{ y: "0%" }} transition={{ duration: 1 }}
     >
-      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center gap-8 py-8">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center gap-8 pb-16 md:py-8">
         <div className="w-full">
           <Image
             alt="Foto"
