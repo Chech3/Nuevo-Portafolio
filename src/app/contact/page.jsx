@@ -66,7 +66,7 @@ function ContactPage() {
   };
 
   return (
-    <motion.div className="h-full" initial={{ y: "-200vh" }} animate={{ y: "0%" }} transition={{ duration: 1 }}>
+    <motion.div className="h-full " initial={{ y: "-200vh" }} animate={{ y: "0%" }} transition={{ duration: 1 }}>
       <ToastContainer />
       <div className='h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48'>
         {/* text container */}
@@ -86,7 +86,7 @@ function ContactPage() {
           </div>
         </div>
         {/* form container */}
-        <form onSubmit={sendEmail} ref={form} className='h-2/3 md:h-2/3 lg:h-full lg:w-1/2 dark:bg-slate-500 bg-blue-100 rounded-xl text-xl flex flex-col gap-8 justify-center p-24 mb-24 lg:p-20'>
+        <form onSubmit={sendEmail} ref={form} className='h-2/3 lg:h-full w-auto dark:bg-slate-500 bg-blue-100 rounded-xl text-xl flex flex-col gap-8 justify-center p-24 mb-24 lg:p-20'>
           <span className='dark:text-white font-semibold duration-300'>Dear Jose</span>
           <textarea name='user_message' className='bg-transparent dark:text-white resize-none border-b-2 border-b-black outline-none' rows={6} />
           <span className='dark:text-white font-semibold duration-300'>My mail address is: </span>

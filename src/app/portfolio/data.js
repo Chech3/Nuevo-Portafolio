@@ -3,7 +3,7 @@ import canvas from "@public/canvas.png"
 import scriptPython from "@public/scriptPython.png"
 import BlackJack from "@public/black-jack.png"
 import firefox from "@public/firefox.png"
-
+import telemed from "@public/telemed.png"
 export const items = [
   {
     id: 1,
@@ -39,12 +39,21 @@ export const items = [
   },
   {
     id: 5,
-    color: "from-red-300 to-blue-300 dark:from-purple-500 dark:via-indigo-500 dark:to-blue-500",
+    color: "from-red-300 to-purple-300 dark:from-purple-500 dark:via-indigo-500 dark:to-purple-500",
     title: "Firefox Clon",
     desc: "Firefox clon made with Tailwind ",
     img: firefox,
     link: "https://clon-firefox.vercel.app/",
-  }
+  },
+  {
+    id: 6,
+    color: "from-purple-300 to-red-300 dark:from-purple-500 dark:via-indigo-500 dark:to-purple-500",
+    title: "Website Telemed",
+    desc: "This page was the result of my work with my colleagues in the no country simulation",
+    img: telemed,
+    link: "https://telemed-beta-nine.vercel.app/",
+  },
+
 ];
 
 

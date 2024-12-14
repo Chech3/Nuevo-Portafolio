@@ -7,8 +7,8 @@ function NavLinks({ link }) {
 
   // console.log(pathName);
   return (
-    <Link className={`rounded p-1 ${pathName === link.url && "bg-black text-white"}`} href={link.url}>
-      <button className='py-1'>
+    <Link className={`rounded-lg p-1 ${pathName === link.url && "bg-black text-white"}`} href={link.url}>
+      <button className='py-1 '>
         {link.title}
       </button>
     </Link>

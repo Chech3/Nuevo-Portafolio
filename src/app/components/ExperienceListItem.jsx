@@ -1,22 +1,18 @@
-import React from 'react'
-// import ExperienceListItemRight from './ExperienceListItemRight'
-
-const ExperienceListItem = ({bioRef}) => {
+const ExperienceListItem = ({ bioRef }) => {
     const scrollToStart = () => {
         bioRef.current.scrollIntoView({ behavior: 'smooth' })
-        
 
         setTimeout(() => {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth',
-              });
+            });
         }, 1000);
     };
     return (
         <div className='dark:text-white flex justify-between sm:h-full md:48 lg:h-48'>
             {/*left*/}
-            <div className='w-1/3'>
+            <div className='w-[40%]'>
                 {/* Job Title */}
                 <h3 className='bg-white dark:bg-slate-800 text-black dark:text-white  font-semibold p-3 rounded-b-lg rounded-s-lg duration-300 w-32 sm:w-full md:w-full lg:w-full  '>Programmer </h3>
                 {/* job desc */}
@@ -31,22 +27,23 @@ const ExperienceListItem = ({bioRef}) => {
                 <h5 className='p-3 bg-white dark:bg-slate-800 text-black dark:text-white text-sm font-semibold w-fit rounded-b-lg rounded-s-lg duration-300'>Venezolana de Industria Tecnológica</h5>
             </div>
             {/* center */}
-            <div className='w-1/6 flex justify-center'>
+            <div className='w-[5%] flex justify-center'>
                 {/* Line */}
-                <div className="w-1 h-80 dark:bg-gray-200 bg-gray-600 rounded relative duration-300">
+                <div className="w-1 h-[75%] md:h-80 dark:bg-gray-200 bg-gray-600 rounded relative duration-300">
                     {/* line circle */}
                     <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2 "></div>
+                    {/* <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white bottom-1 -left-2 "></div> */}
                 </div>
             </div>
             {/* right */}
-            <div className="w-1/3 ">
+            <div className="w-[40%] ">
                 {/* JOB TITLE */}
                 <h3 className="bg-white dark:bg-slate-800 text-black dark:text-white p-3 font-semibold rounded-b-lg rounded-s-lg duration-300 ">
                     Fronted Developer
                 </h3>
                 {/* JOB DESC */}
                 <p className="p-3 text-sm italic text-dark dark:text-white duration-300">
-                I was in a work simulation, where we worked as a whole team. We developed an application to be able to have online medical consultations.
+                    I was in a work simulation, where we worked as a whole team. We developed an application to be able to have online medical consultations.
                 </p>
                 {/* JOB DATE */}
                 <h4 className="p-3 text-dark dark:text-white text-sm font-semibold duration-300">
@@ -57,7 +54,7 @@ const ExperienceListItem = ({bioRef}) => {
                     No Country
                 </h5>
 
-                <div className=' mt-20 rotate-180'>
+                <div className=' mt-10 rotate-180'>
                     {/* BIOGRAPHY SCROLL SVG */}
                     <svg
                         onClick={scrollToStart}
@@ -82,8 +79,6 @@ const ExperienceListItem = ({bioRef}) => {
                     </svg>
                 </div>
             </div>
-
-
         </div>
 
     )

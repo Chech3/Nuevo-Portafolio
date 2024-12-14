@@ -47,6 +47,10 @@ function PortFolioPage() {
                 </div>
               </div>
             ))}
+            <div
+                className={`h-screen w-screen flex items-center justify-center animated-background bg-gradient-to-r from-red-300 to-blue-300 dark:from-purple-500 dark:via-indigo-500 dark:to-blue-500`}
+          
+              ></div>
           </motion.div>
         </div>
       </div>
