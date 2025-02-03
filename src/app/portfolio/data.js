@@ -1,6 +1,6 @@
 import chat from "@public/chat.png"
 import canvas from "@public/canvas.png"
-import scriptPython from "@public/scriptPython.png"
+import biblioteca from "@public/biblioteca.png"
 import BlackJack from "@public/black-jack.png"
 import firefox from "@public/firefox.png"
 import telemed from "@public/telemed.png"
@@ -24,10 +24,10 @@ export const items = [
   {
     id: 3,
     color: "from-violet-300 to-purple-300 dark:from-purple-500 dark:via-indigo-500 dark:to-purple-500",
-    title: "Script Python",
-    desc: "Python script made to take the first capture detected in a camera within the RTCP protocol. Made with Python and FastApi",
-    img: scriptPython,
-    link: "https://github.com/Chech3/ss_python_script/tree/main",
+    title: "Bookshop ",
+    desc: "This is a web application developed in Laravel that allows to efficiently manage the daily operations of a library. The system is designed to facilitate the registration and control of books, users and library loans.",
+    img: biblioteca,
+    link: "https://github.com/Chech3/libros-prestamos",
   },
   {
     id: 4,
