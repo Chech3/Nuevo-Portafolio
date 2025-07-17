@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import { motion, useInView } from "framer-motion"
 import dynamic from 'next/dynamic'
 import ExperienceListItemLeft from '../components/ExperienceListItem';
@@ -80,7 +80,7 @@ function AboutPage() {
             {/* BIOGRAPHY SCROLL SVG */}
             <motion.svg
               onClick={scrollToMiddle}
-              className='motion-safe:animate-bounce dark:invert duration-300'
+              className='motion-safe:animate-bounce dark:invert duration-300 cursor-pointer'
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -115,7 +115,7 @@ function AboutPage() {
             {/* BIOGRAPHY SCROLL SVG */}
             <motion.svg
               onClick={scrollToEnd}
-              className='motion-safe:animate-bounce mt-32 dark:invert duration-300'
+              className='motion-safe:animate-bounce mt-32 dark:invert duration-300 cursor-pointer'
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
