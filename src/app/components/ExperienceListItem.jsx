@@ -21,7 +21,7 @@ const ExperienceListItem = ({ bioRef }) => {
                 </p>
 
                 {/* job date */}
-                <h4 className='p-3 text-dark dark:text-white text-sm font-semibold duration-300'>2021 august - present</h4>
+                <h4 className='p-3 text-dark dark:text-white text-sm font-semibold duration-300'>2022 august - present</h4>
 
                 {/* job company */}
                 <h5 className='p-3 bg-white dark:bg-slate-800 text-black dark:text-white text-sm font-semibold w-fit rounded-b-lg rounded-s-lg duration-300'>Venezolana de Industria Tecnológica</h5>

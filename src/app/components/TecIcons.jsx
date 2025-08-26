@@ -1,5 +1,4 @@
 import React from 'react'
-import { motion } from 'framer-motion'
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import './styles/style.css'
@@ -115,27 +114,12 @@ const TecIcons = () => {
                             className="hover:rotate-45 duration-300"
                             height="48" preserveAspectRatio="xMidYMid" viewBox="0 0 512 308.883" width="48" xmlns="http://www.w3.org/2000/svg"><path d="m120.81 80.561h96.568v7.676h-87.716v57.767h82.486v7.675h-82.486v63.423h88.722v7.675h-97.574zm105.22 0h10.26l45.467 63.423 46.473-63.424 63.211-80.56-103.85 150.65 53.515 74.127h-10.663l-48.686-67.462-48.888 67.462h-10.461l53.917-74.128zm118.898 7.676v-7.677h110.048v7.676h-50.699v136.54h-8.852v-136.539zm-344.928-7.677h11.065l152.58 228.323-63.053-84.107-91.338-133.308-.402 133.31h-8.852zm454.084 134.224c-1.809 0-3.165-1.4-3.165-3.212 0-1.81 1.356-3.212 3.165-3.212 1.83 0 3.165 1.401 3.165 3.212s-1.335 3.212-3.165 3.212zm8.698-8.45h4.737c.064 2.565 1.937 4.29 4.693 4.29 3.079 0 4.823-1.854 4.823-5.325v-21.99h4.823v22.011c0 6.252-3.617 9.853-9.603 9.853-5.62 0-9.473-3.493-9.473-8.84zm25.384-.28h4.78c.409 2.953 3.294 4.828 7.45 4.828 3.875 0 6.717-2.005 6.717-4.764 0-2.371-1.809-3.794-5.921-4.764l-4.005-.97c-5.62-1.316-8.181-4.032-8.181-8.602 0-5.54 4.521-9.227 11.303-9.227 6.308 0 10.916 3.686 11.196 8.925h-4.694c-.452-2.867-2.95-4.657-6.567-4.657-3.81 0-6.35 1.833-6.35 4.635 0 2.22 1.635 3.493 5.683 4.441l3.423.841c6.373 1.488 9 4.075 9 8.753 0 5.95-4.607 9.68-11.97 9.68-6.89 0-11.52-3.558-11.864-9.12z" /></svg>
                     </div>
-                } position="left center"
+                } position="top center"
                 >
                     <p>
                         Next.js is a React framework for building performant web applications.
                     </p>
                 </Popup>
-
-                <Popup onClose={handleClose} onOpen={handleOpen} trigger={
-                    <div className="rounded-lg bg-slate-200 dark:bg-slate-400 p-2 text-sm cursor-pointer  text-white hover:bg-white dark:hover:bg-slate-300">
-                        {/* Socket IO */}
-                        <svg
-                            className="hover:rotate-45 duration-300"
-                            width="48" height="48" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet"><path d="M96.447 7.382c32.267-8.275 67.929-3.453 96.386 14.11 35.84 21.433 59.238 61.976 59.833 103.71 1.31 42.15-20.659 83.944-55.963 106.865-39.293 26.433-93.648 27.446-133.775 2.322-40.9-24.41-64.774-73.645-58.641-120.916 4.94-49.95 43.52-94.005 92.16-106.09z" fill="#010101" /><path d="M91.505 27.803c60.964-24.41 135.74 20.658 142.05 86.028 9.824 58.82-38.995 118.593-98.59 120.32-56.677 5.656-111.449-42.39-113.056-99.304-4.227-46.08 26.136-91.803 69.596-107.044z" fill="#FFF" /><path d="M97.637 121.69c27.327-22.326 54.058-45.426 81.98-67.097-14.646 22.505-29.708 44.711-44.354 67.215-12.562.06-25.123.06-37.626-.119zM120.737 134.132c12.621 0 25.183 0 37.745.179-27.505 22.206-54.117 45.484-82.099 67.096 14.646-22.505 29.708-44.77 44.354-67.275z" fill="#010101" /></svg>
-                    </div>
-                } position="right center"
-                >
-                    <p>
-                        Socket.io is a library for real-time web applications.
-                    </p>
-                </Popup>
-
 
 
                 <Popup onClose={handleClose} onOpen={handleOpen} trigger={
@@ -231,6 +215,31 @@ const TecIcons = () => {
                     <p>PostgreSQL is an object-relational database management system (ORDMBS), which means that it has relational capabilities and an object-oriented design.  </p>
                 </Popup>
 
+                <Popup onClose={handleClose} onOpen={handleOpen} trigger={
+                    <div className="rounded-lg bg-slate-200 dark:bg-slate-400 p-2 text-sm cursor-pointer  text-white hover:bg-white dark:hover:bg-slate-300">
+                        {/* C# */}
+                        <svg className="hover:rotate-45 duration-300" height="48" preserveAspectRatio="xMidYMid" viewBox="0 -1.428 255.582 290.108" width="48" xmlns="http://www.w3.org/2000/svg"><path d="m255.569 84.452c-.002-4.83-1.035-9.098-3.124-12.76-2.052-3.603-5.125-6.622-9.247-9.009-34.025-19.619-68.083-39.178-102.097-58.817-9.17-5.294-18.061-5.1-27.163.27-13.543 7.986-81.348 46.833-101.553 58.536-8.321 4.818-12.37 12.19-12.372 21.771-.013 39.455 0 78.91-.013 118.365 0 4.724.991 8.91 2.988 12.517 2.053 3.711 5.169 6.813 9.386 9.254 20.206 11.703 88.02 50.547 101.56 58.536 9.106 5.373 17.997 5.565 27.17.27 34.015-19.64 68.075-39.199 102.105-58.818 4.217-2.44 7.333-5.544 9.386-9.252 1.994-3.608 2.987-7.793 2.987-12.518 0 0 0-78.889-.013-118.345" fill="#a179dc" /><path d="m128.182 143.241-125.194 72.084c2.053 3.711 5.169 6.813 9.386 9.254 20.206 11.703 88.02 50.547 101.56 58.536 9.106 5.373 17.997 5.565 27.17.27 34.015-19.64 68.075-39.199 102.105-58.818 4.217-2.44 7.333-5.544 9.386-9.252z" fill="#280068" /><path d="m255.569 84.452c-.002-4.83-1.035-9.098-3.124-12.76l-124.263 71.55 124.413 72.073c1.994-3.608 2.985-7.793 2.987-12.518 0 0 0-78.889-.013-118.345" fill="#390091" /><g fill="#fff"><path d="m201.892 116.294v13.474h13.474v-13.474h6.737v13.474h13.474v6.737h-13.474v13.473h13.474v6.737h-13.474v13.474h-6.737v-13.474h-13.474v13.474h-6.737v-13.474h-13.473v-6.737h13.473v-13.473h-13.473v-6.737h13.473v-13.474zm13.474 20.21h-13.474v13.474h13.474z" /><path d="m128.457 48.626c35.144 0 65.827 19.086 82.262 47.456l-.16-.273-41.35 23.808c-8.146-13.793-23.08-23.102-40.213-23.294l-.54-.003c-26.125 0-47.305 21.18-47.305 47.305a47.08 47.08 0 0 0 6.239 23.47c8.154 14.235 23.483 23.836 41.067 23.836 17.693 0 33.109-9.723 41.221-24.11l-.197.345 41.287 23.918c-16.255 28.13-46.518 47.157-81.253 47.536l-1.058.006c-35.255 0-66.025-19.204-82.419-47.724-8.003-13.923-12.582-30.064-12.582-47.277 0-52.466 42.532-95 95-95z" /></g></svg>
+                    </div>
+                } position="top center"
+                >
+                    <p>C# is a modern, object-oriented programming language developed by Microsoft. It is widely used for building Windows applications, web services, and games.  </p>
+                </Popup>
+
+
+                <Popup onClose={handleClose} onOpen={handleOpen} trigger={
+                    <div className="flex flex-col text-black dark:text-white  justify-center items-center group rounded-lg font-bold text-lg bg-slate-200 dark:bg-slate-400 p-2 cursor-pointer hover:bg-white dark:hover:bg-slate-300">
+                        {/* C# */}
+                        <span className='group-hover:scale-110 duration-300'>
+                            ASP
+                        </span>
+                        <span className='group-hover:scale-110 duration-300'>
+                            .NET
+                        </span>
+                    </div>
+                } position="top center"
+                >
+                    <p>ASP.NET is a web framework developed by Microsoft for building dynamic web applications and services. It allows developers to use C# and .NET to create web applications with a rich user interface.</p>
+                </Popup>
 
             </div>
 

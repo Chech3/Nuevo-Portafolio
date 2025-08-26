@@ -1,4 +1,4 @@
-import chat from "@public/chat.png"
+import rifa from "@public/rifa.png"
 import canvas from "@public/canvas.png"
 import biblioteca from "@public/biblioteca.png"
 import BlackJack from "@public/black-jack.png"
@@ -8,10 +8,10 @@ export const items = [
   {
     id: 1,
     color: "from-red-300 to-blue-300 dark:from-indigo-500 dark:via-indigo-500 dark:to-purple-500",
-    title: "Chat",
-    desc: "Chat made with React, Node, SocketIO, JavaScript and Tailwind ",
-    img: chat,
-    link: "https://github.com/Chech3/chatNodeReact",
+    title: "Lottery",
+    desc: "Lottery game made with Next, Nest, TypeScript and Tailwind. Only frontend ",
+    img: rifa,
+    link: "https://rifafronted.vercel.app/",
   },
   {
     id: 2,
