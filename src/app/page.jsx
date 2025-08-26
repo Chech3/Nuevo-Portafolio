@@ -28,12 +28,12 @@ function Home() {
             Hi, I'm Jose Angel, a full-stack developer passionate about creating innovative and functional solutions. I have experience with technologies like React for dynamic user interfaces and Laravel for developing robust and efficient APIs. My expertise spans both frontend and backend, working with languages like JavaScript and PHP, allowing me to build complete and scalable applications. I always strive to stay updated with the latest technological trends to ensure high-quality results.
           </p>
           <div className="flex gap-4 justify-center lg:justify-start">
-            <Link href="/portfolio">
+            <Link className="hidden sm:flex" href="/portfolio">
               <button className="px-6 py-3 rounded-lg ring-1 dark:ring-white ring-black dark:text-white dark:hover:bg-slate-700 hover:bg-blue-300 transition duration-300 ease-in-out">
                 View my work
               </button>
             </Link>
-            <Link href="/contact">
+            <Link className="hidden sm:flex" href="/contact">
               <button className="px-6 py-3 rounded-lg ring-1 dark:ring-white ring-black dark:text-white dark:hover:bg-slate-700 hover:bg-blue-300 transition duration-300 ease-in-out">
                 Contact me
               </button>
