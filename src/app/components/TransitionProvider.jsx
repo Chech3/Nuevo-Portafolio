@@ -30,13 +30,12 @@ const TransitionProvider = ({ children }) => {
                     transition={{ duration: 0.7, ease: "easeOut" }}> {(pathName == "/") ? "Home" : capitalWord} </motion.div>
                 <motion.div
                     className='h-screen w-screen fixed bg-black rounded-t-[100px] bottom-0 z-30 '
-                    inital={{ height: "140vh" }}
+                    initial={{ height: "140vh" }}
                     animate={{ height: "0vh", transition: { delay: 0.5 } }} />
-                <div className="h-24">
+                <div className="h-24 sticky top-0 z-50">
                     <NavBar />
                 </div>
-                <div className="h-[calc(110vh-6rem)] sm:h-[calc(110vh-6rem)] md:h-[calc(130vh-6rem)] lg:h-[calc(100vh-6rem)] xl:h-[calc(100vh-6rem)] ">
-                    {/* <div className="h-[calc(130vh-6rem)]"> */}
+                <div className="h-[calc(100vh-6rem)]">
                     {children}
                 </div>
             </div>

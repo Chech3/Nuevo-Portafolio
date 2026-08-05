@@ -24,26 +24,11 @@ function AboutPage() {
   
 
   const scrollToMiddle = () => {
-    skillRef.current.scrollIntoView({ behavior: 'smooth' });
-
-    setTimeout(() => {
-      window.scrollTo({
-          top: 0,
-          behavior: 'smooth',
-        });
-  }, 1000);
-
+    skillRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const scrollToEnd = () => {
-    experienceH2Ref.current.scrollIntoView({ behavior: 'smooth' });
-
-    setTimeout(() => {
-      window.scrollTo({
-          top: 0,
-          behavior: 'smooth',
-        });
-  }, 1000);
+    experienceH2Ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -53,7 +38,7 @@ function AboutPage() {
       transition={{ duration: 1 }}
       className="h-full">
       {/* container */}
-      <div className='dark:bg-slate-600 bg-blue-200 h-full overflow-y-scroll lg:flex'>
+      <div className='dark:bg-slate-600 bg-blue-200 h-full overflow-y-auto lg:flex'>
         {/* TEXT CONTAINER */}
         <div className='p-4 sm:p-8 md:p-12 lg:p-20 xl:p-32 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:pr-0 lg:w-2/3 xl:1/2 mx-auto'>
           {/* Biografia container*/}

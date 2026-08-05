@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useRef } from 'react'
+import React, { useRef } from 'react'
 import { motion } from "framer-motion"
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
@@ -24,10 +24,8 @@ function ContactPage() {
     };
 
     try {
-      // Validar los datos del formulario
       await validationSchema.validate(formData, { abortEarly: false });
 
-      // Si la validación es exitosa, enviar el correo
       await emailjs.sendForm(
         process.env.NEXT_PUBLIC_SERVICE_ID,
         process.env.NEXT_PUBLIC_TEMPLATE_ID,
@@ -37,62 +35,46 @@ function ContactPage() {
 
       form.current.reset();
       toast.success("Message sent successfully!");
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
     } catch (error) {
-      // Manejar errores de validación
       if (error.name === 'ValidationError') {
-        const formErrors = {};
-        console.log({ error })
-        error.inner.map((err) => {
-          console.log(err.path)
-          formErrors[err.path] = err.message;
+        error.inner.forEach((err) => {
           toast.error(err.message);
         });
-
-
       } else {
-        // Manejar errores de envío de correo
         toast.error("Something went wrong");
       }
-
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
     }
   };
 
   return (
-    <motion.div className="h-full " initial={{ y: "-200vh" }} animate={{ y: "0%" }} transition={{ duration: 1 }}>
+    <motion.div className="h-full overflow-y-auto" initial={{ y: "-200vh" }} animate={{ y: "0%" }} transition={{ duration: 1 }}>
       <ToastContainer />
-      <div className='h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48'>
+      <div className='min-h-full flex flex-col lg:flex-row items-center justify-center px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 py-8 gap-8 lg:gap-12'>
         {/* text container */}
-        <div className='h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-5xl md:text-6xl'>
-          <div className='my-10 '>
-            {text.split("").map((letter, index) =>
-            (<motion.span
-              className='dark:text-white duration-300'
-              key={index}
-              initial={{ opacity: 1 }}
-              animate={{ opacity: 0 }}
-              transition={{ duration: 3, repeat: Infinity, delay: index * 0.1 }}>
-              {letter}
-            </motion.span>)
-            )}
-            <span className='flex justify-center items-center'>😁</span>
+        <div className='w-full lg:w-1/2 flex flex-col items-center justify-center text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold py-4 lg:py-0'>
+          <div className='flex items-center justify-center flex-wrap'>
+            {text.split("").map((letter, index) => (
+              <motion.span
+                className='dark:text-white text-black duration-300 inline-block'
+                key={index}
+                initial={{ opacity: 1 }}
+                animate={{ opacity: 0 }}
+                transition={{ duration: 3, repeat: Infinity, delay: index * 0.1 }}>
+                {letter === " " ? "\u00A0" : letter}
+              </motion.span>
+            ))}
           </div>
+          <span className='mt-4 text-4xl sm:text-5xl'>😁</span>
         </div>
+
         {/* form container */}
-        <form onSubmit={sendEmail} ref={form} className='h-3/4 lg:h-full w-auto dark:bg-slate-500 bg-blue-100 rounded-xl text-xl flex flex-col gap-8 justify-center p-24 mb-24 lg:p-20'>
-          <span className='dark:text-white font-semibold duration-300'>Dear Jose</span>
-          <textarea name='user_message' className='bg-transparent dark:text-white resize-none border-b-2 border-b-black outline-none' rows={6} />
-          <span className='dark:text-white font-semibold duration-300'>My mail address is: </span>
-          <input type="email" name='user_email' className='bg-transparent dark:text-white border-b-2 border-b-black outline-none' />
-          <span className='dark:text-white font-semibold duration-300 '>Regards</span>
-          <button className='font-semilbold p-4 rounded-lg ring-1 bg-blue-300 dark:bg-slate-600 dark:ring-black hover:dark:ring-black ring-black  dark:text-white dark:hover:bg-slate-700 hover:scale-105 hover:bg-blue-400 delay-100 duration-300'>Send</button>
+        <form onSubmit={sendEmail} ref={form} className='w-full lg:w-1/2 dark:bg-slate-500 bg-blue-100 rounded-xl text-lg sm:text-xl flex flex-col gap-6 sm:gap-8 justify-center p-6 sm:p-10 md:p-14 lg:p-16'>
+          <span className='dark:text-white text-black font-semibold duration-300'>Dear Jose</span>
+          <textarea name='user_message' className='bg-transparent text-black dark:text-white resize-none border-b-2 border-b-black dark:border-b-white outline-none w-full p-2' rows={5} />
+          <span className='dark:text-white text-black font-semibold duration-300'>My mail address is: </span>
+          <input type="email" name='user_email' className='bg-transparent text-black dark:text-white border-b-2 border-b-black dark:border-b-white outline-none w-full p-2' />
+          <span className='dark:text-white text-black font-semibold duration-300 '>Regards</span>
+          <button className='font-semibold p-4 rounded-lg ring-1 bg-blue-300 dark:bg-slate-600 dark:ring-white ring-black dark:text-white text-black hover:dark:bg-slate-700 hover:scale-105 hover:bg-blue-400 delay-100 duration-300'>Send</button>
         </form>
       </div>
     </motion.div>

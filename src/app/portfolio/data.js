@@ -1,9 +1,10 @@
 import rifa from "@public/rifa.png"
 import canvas from "@public/canvas.png"
-import biblioteca from "@public/biblioteca.png"
+import isabel from "@public/isabel.png"
 import BlackJack from "@public/black-jack.png"
 import firefox from "@public/firefox.png"
 import telemed from "@public/telemed.png"
+
 export const items = [
   {
     id: 1,
@@ -24,10 +25,10 @@ export const items = [
   {
     id: 3,
     color: "from-violet-300 to-purple-300 dark:from-purple-500 dark:via-indigo-500 dark:to-purple-500",
-    title: "Bookshop ",
-    desc: "This is a web application developed in Laravel that allows to efficiently manage the daily operations of a library. The system is designed to facilitate the registration and control of books, users and library loans.",
-    img: biblioteca,
-    link: "https://github.com/Chech3/libros-prestamos",
+    title: "Isabel | Nail Atelier",
+    desc: "Web application designed for booking and managing premium nail care appointments with online scheduling and WhatsApp integration.",
+    img: isabel,
+    link: "https://isabel-sistema.onrender.com/",
   },
   {
     id: 4,
@@ -53,7 +54,4 @@ export const items = [
     img: telemed,
     link: "https://telemed-beta-nine.vercel.app/",
   },
-
 ];
-
-
